@@ -1,0 +1,10 @@
+<section class="blogs_page">
+	<h2>Latest news and Thoughts</h2>
+	<% @blogs.reverse.each do |blog| %>
+		<div class="blog">
+			<p><%= blog.photo %></p>
+			<p><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+			<p><%= blog.updated_at.strftime("%B %-d, %Y") %></p>
+		</div>
+	<% end %>
+</section>

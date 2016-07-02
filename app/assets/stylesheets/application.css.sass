@@ -1,0 +1,39 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+@font-face
+  font-family: alienandcows
+  src: font-url('alienandcows.ttf') format("truetype")
+
+=paper-background 
+  background: image-url('paper_texture.png') repeat
+  background-size: 100% 
+
+html, body
+  margin: 0
+  padding: 0
+  height: 100%
+  +paper-background
+
+@import "header.sass"
+@import "footer.sass"
+
+.latest-news-title
+  width: 40%
+  float: right
+  margin: 8% 15% 0 0 

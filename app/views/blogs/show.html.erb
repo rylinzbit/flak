@@ -1,0 +1,29 @@
+<section class="blog_show">
+	<p><%= @blog.photo %></p>
+	<p><%= @blog.title %></p>
+	<p><%= @blog.content %></p>
+	<br>
+	<h4>Comments</h4>
+	<% @comments.reverse.each do |comment| %>
+		<div class="comments">
+			<p><%= comment.created_at.strftime("%B %-d, %Y %I:%M %p") %></p>
+			<p><%= comment.name %></p>
+			<p><%= comment.comment %></p>
+		</div>
+	<% end %>
+	<p><a href="/blog">Back</a></p>
+	<div id="add_comment">
+	<% if flash[:errors] %>
+		<%= flash[:errors] %>
+	<% end %>
+		<h5>Add Comment</h5>
+		<form action="/create_comment" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<input type="hidden" name="comment[blog_id]" value="<%= @blog.id %>">
+			<p><span>Name:</span><input type="text" name="comment[name]" id="name_box"></p>
+			<p><span>Comment: </span>
+			<textarea name="comment[comment]"></textarea></p>
+			<input type="submit" value="Add Comment">
+		</form>
+	</div>
+</section>

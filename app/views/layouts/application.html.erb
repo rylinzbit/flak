@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FLAK</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header class="top-nav">
+		<ul>
+			<li><a href="/main">Home</a></li>
+			<li><a href="/blogs">Blog</a></li>
+			<li><a href="/classes">Class</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+		</ul>
+	</header>
+
+<%= yield %>
+
+	<footer>
+		<section class="left-side-footer">
+			<div class="social-media-icons">
+				<a href="">T</a>
+				<a href="">F</a>
+				<a href="">Tw</a>
+				<a href="">S</a>
+				<a href="">I</a>
+			</div>
+			<form action="/" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				<input type="text" name="email" placeholder="Email">
+				<input type="submit" value="Subscribe" class="submit-btn">
+			</form>
+		</section>
+		<section class="right-side-footer">
+			
+		</section>
+	</footer>
+</body>
+</html>
