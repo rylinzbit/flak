@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get '/about' => 'about#index'
   
   get '/contact' => 'contact#index'
+
+  get '/testimonials' => 'testimonials#index'
+  get '/testimonials/like' => 'testimonials#like'
   
 
 

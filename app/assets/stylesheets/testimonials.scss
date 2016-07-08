@@ -1,0 +1,34 @@
+// Place all the styles related to the Testimonials controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content-testimonial {
+	height: 1000px;
+	background-image: url("chainmail_bg.jpg");
+	background-size: 100vw auto;
+	background-repeat: no-repeat;
+	padding-top: 3em;
+}
+
+.block {
+	display: block;
+	width: 100vw;
+	padding: 0 3em 2em 3em;
+	.comment {
+		width: 85%;
+		background-color: rgba(255, 255, 255, 0.87);
+		padding: 2em 2.5em 1em 2.5em;
+		font-weight: bolder;
+		p:nth-child(3) {
+			margin-left: 2em;
+			opacity: .7;
+		}
+	}
+
+	&:nth-child(even) {
+		.comment {
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+}

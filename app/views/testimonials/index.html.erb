@@ -1,0 +1,15 @@
+<div class="content-testimonial">
+	<div class="wrapper-testimonial">
+		<% @testimonials.each do |testimonial| %>
+			<div class="block">
+				<div class="comment">
+					<p>"<%= testimonial.content %>"</p>
+					<p>~ <%= testimonial.name %>-<%= testimonial.projects %></p>
+					<p>
+						<%= testimonial.likes==nil ? "0" : testimonial.likes %> likes
+					</p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>
