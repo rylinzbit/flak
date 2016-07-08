@@ -16,7 +16,8 @@ Rails.application.routes.draw do
   get '/contact' => 'contact#index'
 
   get '/testimonials' => 'testimonials#index'
-  get '/testimonials/like' => 'testimonials#like'
+  post '/testimonials' => 'testimonials#create'
+  post '/testimonials/:id/like' => 'testimonials#like'
   
 
 

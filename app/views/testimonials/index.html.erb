@@ -5,11 +5,26 @@
 				<div class="comment">
 					<p>"<%= testimonial.content %>"</p>
 					<p>~ <%= testimonial.name %>-<%= testimonial.projects %></p>
-					<p>
+					<div>
+						<form class="testy" action="testimonials/<%= testimonial.id %>/like" method="post">
+							<input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
+							<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+						</form>
 						<%= testimonial.likes==nil ? "0" : testimonial.likes %> likes
-					</p>
+					</div>
 				</div>
 			</div>
 		<% end %>
+
+	</div>
+	<div class="wrapper-new-testimonial">
+		<h4>WRITE A NEW COMMENT!</h4>
+		<form action="testimonials" method="post">
+			<input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
+			<input type="text" name="testimonial[name]" id="Name" placeholder="NAME...">
+			<input type="text" name="testimonial[projects]" id="Projects" placeholder="PROJECTS...">
+			<input type="text" name="testimonial[content]" id="Content" placeholder="COMMENT...">
+			<button type="submit" id="Submit">SUBMIT</button>
+		</form>
 	</div>
 </div>
