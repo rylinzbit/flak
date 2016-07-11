@@ -1,0 +1,69 @@
+// Place all the styles related to the About controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.about-wrapper {
+	position: relative;
+	border: 1px solid red;
+
+	.about-wrapper-top {
+		font-family: alienandcows;
+		margin: 0;
+		
+		img {
+			width: 100%;
+			z-index: -1;
+		}
+
+		.about-wrapper-title {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 2em;
+			height: 100%;
+			p {
+				font-family: inherit;
+				font-size: 5vw;
+				color: darkgray;
+			}
+		}  /*title*/
+	} /*top*/
+
+	.about-wrapper-main {
+		position: relative;
+		margin: 0;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: stretch;
+
+		.about-wrapper-content {
+			background-color: #fff;
+			width: 70%;
+			margin: 0;
+			padding: 2em 6em 2em 2em;
+			h1 {
+				font-size: 8rem;
+			}
+			p{
+				text-indent: 2em;
+				font-size: 1.5em;
+			}
+		} /*content*/
+	
+		.about-wrapper-friends {
+			background-color: #fff;
+			width: 15%;
+			padding: 2em 2em 0 1em;
+			h3 {
+				display: table;
+				&:after {
+					border-bottom: 1px solid #000;
+					content:'';
+					display: block;
+					width: 87%;
+				}
+			}
+		} /*friends*/
+	}
+}

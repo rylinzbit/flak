@@ -3,17 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .content-testimonial {
+	margin: 0;
 	height: 1000px;
 	background-image: url("chainmail_bg.jpg");
-	background-size: 100vw auto;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
 	padding-top: 3em;
 	overflow: scroll;
 }
 
+.wrapper-testimonial {
+	margin: 0;
+}
+
 .block {
+	margin: 0;
 	display: block;
-	width: 100vw;
+	width: 100%;
 	padding: 0 7% 2em 7%;
 	.comment {
 		width: 80%;
@@ -39,7 +45,7 @@
 
 .wrapper-new-testimonial {
 	color: white;
-	width: 60vw;
+	width: 60%;
 	margin: 40px auto;
 	padding: 1.5em 2em;
 	background-color: rgba(0, 0, 0, 0.87);
