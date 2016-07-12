@@ -21,23 +21,24 @@
       a
         text-decoration: none
         color: darkgray
+        &:hover
+          color: lightgray
     .dropdown
-      &:hover .dropdown-content
-        display: block
-      button
+      .dropbtn
         color: darkgray
         border: none
         background-color: transparent
       .dropdown-content
-        display: none
-        position: absolute
+        visibility: hidden
         background-color: #fff
-        font-size: 2rem
-        padding: 1em
+        position: absolute
+        margin: 0 auto
+        width: 100%
         z-index: 3
+        a
+          font-size: 3rem
+          display: block
         a:hover
-          color: #000
-        /*min-width: 160px;*/
-        /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-
-
+          color: lightgray
+      &:hover .dropdown-content
+        visibility: visible
