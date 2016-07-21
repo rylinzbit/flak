@@ -10,12 +10,17 @@ class BlogsController < ApplicationController
 		render "show"
 	end
 
+	def most_recent
+		@blog = Blog.last
+		redirect_to "/show/#{@blog.id}"
+	end
+
 	def create_comment
 		@submitted = BlogComment.new( comment_params )
 		if @submitted.save
 			redirect_to "/show/#{@submitted.blog_id}"
 		else
-			flash[:errors] = "Comment was not saved"
+			flash[:errors] = "Comment was not saved. Try again."
 			redirect_to :back
 		end
 	end

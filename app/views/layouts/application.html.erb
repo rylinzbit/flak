@@ -6,10 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<header class="top-nav">
+<body class="container-fluid">
+	<header class="top-nav row">
 		<ul>
-			<li><a href="/main">Home</a></li>
+			<li><a href="/">Home</a></li>
 			<li><a href="/blogs">Blog</a></li>
 			<li><a href="/classes">Class</a></li>
 			<li><a href="/about">About</a></li>
@@ -19,23 +19,49 @@
 
 <%= yield %>
 
-	<footer>
+	<footer class="row">
 		<section class="left-side-footer">
 			<div class="social-media-icons">
-				<a href="">T</a>
 				<a href="">F</a>
-				<a href="">Tw</a>
-				<a href="">S</a>
 				<a href="">I</a>
+				<a href="">Q</a>
+				<a href="">S</a>
 			</div>
-			<form action="/" method="post">
+			<form action="/create_email" method="post">
 				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-				<input type="text" name="email" placeholder="Email">
-				<input type="submit" value="Subscribe" class="submit-btn">
+				<input type="email" name="email" placeholder="Email">
+				<input type="submit" value="Subscribe" class="email-submit-btn">
 			</form>
 		</section>
 		<section class="right-side-footer">
-			
+			<ul>
+				<li class="right-side-headings"><a href="/">Home</a></li>
+				<li class="right-side-headings"><a href="/blogs">Blog</a>
+					<ul class="footer-small-links">
+						<li><a href="/most_recent">Most&nbspRecent</a></li>
+						<li><a href="">Archive</a></li>
+					</ul>
+				</li>
+				<li class="right-side-headings"><a href="">Press</a>
+					<ul class="footer-small-links">
+						<li><a href="">News</a></li>
+						<li><a href="">Articles</a></li>
+						<li><a href="">Testimonials</a></li>
+					</ul>
+				</li>
+				<li class="right-side-headings"><a href="">Legal</a>
+					<ul class="footer-small-links">
+						<li><a href="">Licenses</a></li>
+						<li><a href="">Agreements</a></li>
+					</ul>
+				</li>
+				<li class="right-side-headings"><a href="/contact">Contact</a>
+					<ul class="footer-small-links">
+						<li>( 818 ) 303-5895</li>
+						<li>Swordmaster@FightLikeAKnight.com</li>
+					</ul>
+				</li>
+			</ul>
 		</section>
 	</footer>
 </body>
