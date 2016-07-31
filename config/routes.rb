@@ -11,11 +11,15 @@ Rails.application.routes.draw do
 
   post "/create_comment" => "blogs#create_comment"
 
-  get '/classes' => 'classes#index'
+  get '/classes' => 'lessons#index'
 
   get '/about' => 'about#index'
   
   get '/contact' => 'contact#index'
+
+  get '/testimonials' => 'testimonials#index'
+  post '/testimonials' => 'testimonials#create'
+  post '/testimonials/:id/like' => 'testimonials#like'
   
 
 

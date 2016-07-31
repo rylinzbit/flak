@@ -16,6 +16,12 @@
 			<li><a href="/contact">Contact</a></li>
 		</ul>
 	</header>
+	
+	<% if flash[:errors] %>
+		<% flash[:errors].each do |error| %>
+    		<p><%= error %></p>
+  		<% end %>
+	<% end %>
 
 <%= yield %>
 

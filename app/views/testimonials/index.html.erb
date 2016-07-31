@@ -1,0 +1,28 @@
+<div class="testimonial-wrapper-main">
+	<% @testimonials.each do |testimonial| %>
+		<div class="comment-block">
+			<div class="comment-content">
+				<p>"<%= testimonial.content %>"</p>
+				<p>~ <%= testimonial.name %>-<%= testimonial.projects %></p>
+				<div>
+					<form class="comment-form-like" action="testimonials/<%= testimonial.id %>/like" method="post">
+						<input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
+						<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+					</form>
+					<%= testimonial.likes==nil ? "0" : testimonial.likes %> likes
+				</div>
+			</div>
+		</div>
+	<% end %>
+
+	<div class="testimonial-wrapper-form">
+		<h4>WRITE A NEW COMMENT!</h4>
+		<form action="testimonials" method="post">
+			<input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
+			<input type="text" name="testimonial[name]" id="Name" placeholder="NAME...">
+			<input type="text" name="testimonial[projects]" id="Projects" placeholder="PROJECTS...">
+			<input type="text" name="testimonial[content]" id="Content" placeholder="COMMENT...">
+			<button type="submit" id="Submit">SUBMIT</button>
+		</form>
+	</div>
+</div>
