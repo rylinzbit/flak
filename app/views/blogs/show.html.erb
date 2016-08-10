@@ -1,29 +1,47 @@
 <section class="blog_show">
-	<p><%= @blog.photo %></p>
-	<p><%= @blog.title %></p>
-	<p><%= @blog.content %></p>
-	<br>
-	<h4>Comments</h4>
-	<% @comments.reverse.each do |comment| %>
-		<div class="comments">
-			<p><%= comment.created_at.strftime("%B %-d, %Y %I:%M %p") %></p>
-			<p><%= comment.name %></p>
-			<p><%= comment.comment %></p>
-		</div>
-	<% end %>
-	<p><a href="/blog">Back</a></p>
-	<div id="add_comment">
+	<p><img src="/assets/<%= @blog.photo %>"></p>
+	<p class="lato-it"><%= @blog.updated_at.strftime("%B %-d, %Y") %></p>
+	<p class="slant-heading"><%= @blog.title %></p>
+	<p class="blog_content lato"><%= @blog.content %></p>
+	
+	<!-- BACK AND NEXT BTNS -->
+	<section class="row">
+		<div id="back-rect" class="green_rectangle col-lg-1"></div>
+		<% if @blog.id  %>
+		<a href="/blogs" class="nav-btn col-lg-1">Back</a>
+		<% end %>
+		<% if @blog.id > 1 %>
+			<a href="/show/<%= @blog.id - 1 %>" class="nav-btn next col-lg-1">Next</a>
+		<% else %>
+			<a href="/blogs" class="nav-btn next col-lg-1">Next</a>
+		<% end %>
+
+		<div id="front-rect" class="green_rectangle"></div>
+	</section>
+
+	<!-- COMMENTS SECTION -->
+	<section class="row comments">
+		<h4 class="big-noodle">Comments</h4>
+		<% @comments.reverse.each do |comment| %>
+			<div class="individual-comment">
+				<p class="comment-content"><%= comment.comment %></p>
+				<p class="comment-name"> - <%= comment.name %></p>
+				<p class="comment-time"><%= comment.created_at.strftime("%B %-d, %Y %I:%M %p") %></p>
+			</div>
+		<% end %>
+	</section>
+	<div id="add_comment" class="row">
 	<% if flash[:errors] %>
 		<%= flash[:errors] %>
 	<% end %>
-		<h5>Add Comment</h5>
+		<h5 class="col-lg-2">Add Comment</h5>
 		<form action="/create_comment" method="post">
 			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-			<input type="hidden" name="comment[blog_id]" value="<%= @blog.id %>">
-			<p><span>Name:</span><input type="text" name="comment[name]" id="name_box"></p>
-			<p><span>Comment: </span>
-			<textarea name="comment[comment]"></textarea></p>
-			<input type="submit" value="Add Comment">
+			<input type="hidden" name="comment[blog_id]" value="<%= @blog.id %>" class="form-control">
+			<p class="col-lg-5"><input type="text" name="comment[name]" placeholder="Name" class="form-control"></p>
+			<p>
+			<p class="col-lg-8"><textarea name="comment[comment]" placeholder="Comment" class="form-control"></textarea></p>
+			<input type="submit" value="ADD" class="btn btn-default col-lg-1">
 		</form>
 	</div>
 </section>

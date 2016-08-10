@@ -10,15 +10,51 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
  */
-@import "bootstrap-sprockets"
 @import "bootstrap"
 
 @font-face
   font-family: alienandcows
   src: font-url('alienandcows.ttf') format("truetype")
+@font-face
+  font-family: bigNoodleTitling
+  src: font-url('bigNoodleTitling.ttf') format("truetype")
+@font-face
+  font-family: bigNoodleTitlingOblique
+  src: font-url('big_noodle_titling_oblique.ttf') format("truetype")
+@font-face
+  font-family: socialCircles
+  src: font-url('socialCircles.otf')
+@font-face
+  font-family: latoLightItalic
+  src: font-url('Lato-LightItalic.ttf') format("truetype")
+@font-face
+  font-family: latoRegular
+  src: font-url('Lato-Regular.ttf') format("truetype")
+@font-face
+  font-family: latoThin
+  src: font-url('Lato-Thin.ttf') format("truetype")
+
+/* --- - - FONTS - - --- */
+
+$primary-font: alienandcows
+$secondary-font: bigNoodleTitling
+$secondary-font-italic: bigNoodleTitlingOblique
+$media-icon-font: socialCircles
+$text-font: latoRegular
+$text-font-italic: latoLightItalic
+
+/* --- - - COLORS - - --- */
+
+$dark-green: rgba(#53704B, 1)
+$olive-green: rgba(#647E5D, 1)
+$light-green: rgba(#6C8764, 1)
+$white: rgba(white, 0.9)
+$off-white: rgba(white, 0.8)
+$text-gray: rgba(#5B5C5A, 1)
+$dark-gray: rgba(#565B56, 1)
+$light-gray: rgba(#989A97, 1)
+
 
 =paper-background 
   background: image-url('paper_texture.png') repeat
@@ -32,8 +68,4 @@ html, body
 
 @import "header.sass"
 @import "footer.sass"
-
-.latest-news-title
-  width: 40%
-  float: right
-  margin: 8% 15% 0 0 
+@import "blogs.sass"

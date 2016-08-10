@@ -1,25 +1,65 @@
+
+
 footer
-  height: 22%
+  min-height: 20%
+  width: 100%
   background: rgba(135, 163, 135, 0.5)
-  padding: 2% 4%
-  margin-top: 2.5%
+  padding: 0.3% 0 0.3% 4%
+  margin-top: 3%
+  position: absolute
+
+  font-family: alienandcows
+  .left-side-footer
+    width: 33%
+  .right-side-footer
+    width: 64%
+    margin-top: 0.5%
+  .left-side-footer, .right-side-footer
+    display: inline-block
+    vertical-align: top
+  a
+    text-decoration: none
+    color: $off-white
+  a:hover
+    text-decoration: none
+    color: $light-gray
 
 .social-media-icons
-  margin-bottom: 1%
-  .icon
-    width: 2.7%
-    margin: 0 0.06%
-    display: inline-block
+  font-family: $media-icon-font
+  font-size: 5.5rem
 
-.submit-btn
-  width: 6%
+/* - - Styling for email subscription  - - - - */
 
-input[name=email]
-  width: 16%
+.email-submit-btn
+  margin-left: -2%
+  background-color: $dark-green
+  color: $white
 
-.submit-btn, .email-input
-  height: 6%
+input[type=email]
+  width: 60%
 
-h1
+.email-submit-btn, input[type=email]
+  border: none
+  font-size: 2rem
+  padding: 0 2% 2% 2%
+  margin-top: -2%
   display: inline-block
-  font-family: alienandcows
+  vertical-align: top
+
+/* - - Styling for right side links - - - - */
+
+li
+  text-align: right
+  list-style-type: none
+  color: $white
+  margin-left: 3%
+
+.right-side-headings
+  display: inline-block
+  vertical-align: top
+  font-size: 3.8rem
+
+.footer-small-links
+  line-height: 115%
+  font-family: $secondary-font
+  font-size: 1.8rem

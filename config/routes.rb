@@ -2,13 +2,15 @@ Rails.application.routes.draw do
 
   root "main#index"
 
-  get '/main' => 'main#index'
+  get '/' => 'main#index'
+  post '/create_email' => 'main#create_email'
 
   get '/blogs' => 'blogs#index'
+  get '/most_recent' => 'blogs#most_recent'
   get '/show/:id' => 'blogs#show'
 
   post "/create_comment" => "blogs#create_comment"
-  
+
   get '/classes' => 'lessons#index'
 
   get '/about' => 'about#index'
