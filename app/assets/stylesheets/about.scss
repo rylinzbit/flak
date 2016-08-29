@@ -2,58 +2,87 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$brd: 1px solid red;
+
 .about-wrapper {
 	position: relative;
 
-	.about-wrapper-top {
-		font-family: alienandcows;
+	.about-top {
+		font-family: $primary-font;
 		margin: 0;
+		background-color: rgba($dark-green, .5);
 		
 		img {
 			width: 100%;
 			z-index: -1;
 		}
 
-		.about-wrapper-title {
-			display: inline-block;
-			position: absolute;
-			top: 0;
-			left: 2em;
-			height: 100%;
+		.about-top-title {
+			position: relative;
+			height: 20%;
+			text-align: center;
+			/*position: absolute; s*/
+			/*top: 0; s*/
+			/*left: 2em; s*/
+			/*height: 100%; s*/
+
 			p {
+				width: auto;
+				display: inline;
 				font-family: inherit;
-				font-size: 5vw;
-				color: darkgray;
+				font-size: 7em;
+				/*font-size: 5vw; s*/
+				color: $dark-gray;
 			}
 		}  /*title*/
 	} /*top*/
 
-	.about-wrapper-main {
+	.about-main {
 		position: relative;
 		margin: 0;
 		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		align-items: stretch;
+		/*display: flex; s*/
+		/*justify-content: flex-end; s*/
+		/*align-items: stretch; s*/
 
-		.about-wrapper-content {
+		.about-main-contents, .about-main-friends {
+			display: block;
+			color: $text-gray;
 			background-color: #fff;
-			width: 70%;
+		}
+		
+		.about-main-contents {
+			/*width: 70%; s*/
+			width: 100%;
 			margin: 0;
-			padding: 2em 6em 2em 2em;
+			padding: 1.2em;
+			/*padding: 2em 6em 2em 2em; s*/
+			h1, p {
+				margin: 0;
+				display: block;
+				width: 100%;
+				/*border: $brd;*/
+			}
 			h1 {
-				font-size: 8rem;
+				text-align: center;
+				vertical-align: middle;
+				font-size: 3em;
+				/*font-size: 8rem; s				*/
+				padding-bottom: .5em;
 			}
 			p{
+				color: $text-gray;
+				text-align: justify;
 				text-indent: 2em;
 				font-size: 1.5em;
+				padding-bottom: 2em;
 			}
 		} /*content*/
 	
-		.about-wrapper-friends {
-			background-color: #fff;
-			width: 15%;
-			padding: 2em 2em 0 1em;
+		.about-main-friends {
+			padding: 2em;
+			/*visibility: hidden;*/
+			/*padding: 2em 2em 0 1em; s*/
 			h3 {
 				display: table;
 				&:after {
@@ -62,6 +91,12 @@
 					display: block;
 					width: 87%;
 				}
+			}
+			p {
+				font-family: $text-font-italic;
+				font-size: 1.5em;
+				font-weight: bold;
+
 			}
 		} /*friends*/
 	}

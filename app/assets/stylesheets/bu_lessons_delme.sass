@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$tBorder: 1px solid red;
+
 .lessons-wrapper {
 	margin: 0;
 	width: 100%;
@@ -12,12 +14,12 @@
 		display: inline-block;
 		float: left;
 		width: 6%;
-		background-color: rgba(120, 138, 117, .7);
-		font-family: alienandcows;
+		background-color: rgba($olive-green, .7);
+		font-family: $primary-font;
 		vertical-align: top;
 		p {
 			margin: 0;
-			color: white;
+			color: $white;
 			font-size: 4vw;
 			text-align: center;
 		}
@@ -27,9 +29,10 @@
 		display: inline-block;
 		float: left;
 		width: 35%;
-		margin: 2%;
+		margin: 0 2% 2%;
 		img {
 			width: 100%;
+			max-width: 350px;
 		}
 	}
 	
@@ -40,13 +43,14 @@
 		margin: 2% 2% 2% 0;
 		img {
 			width: 100%;
+			max-width: 620px;
 		}
 	}
 	
 	.image3{
 		display: inline-block;
 		float: left;
-		width: 40%;
+		width: 60%;
 		margin: 2% 1% 2% 6%;
 		img {
 			width: 100%;
@@ -54,19 +58,21 @@
 	}
 
 	.content-box {
-		background-color: rgba(120, 138, 117, .5);
-		color: #30372f;
+		background-color: rgba(	$olive-green, .5);
+		color: $dark-gray;
+		color: #30372f ;
 		padding: 2%;
 		display: inline-block;
 	}
 	.content-1 {
 		float: right;
-		margin: 30% 10% 0 0;
+
+		margin: 5% 10% 0 0;
 		width: 45%;
 	}
 	.content-2 {
 		float: left;
-		margin-left: 7%;
+		margin: 0 0 20px 7%;
 		width: 37%;
 		span {
 			font-weight: bold;

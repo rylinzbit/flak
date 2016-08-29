@@ -1,0 +1,65 @@
+// Place all the styles related to the Testimonials controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.testimonial-wrapper-main 
+	background-image: url("chainmail_bg.jpg")
+	background-size: cover
+	background-repeat: no-repeat
+	background-attachment: fixed
+	padding-top: 3em
+	// display: absolute
+	// top: 0
+	// left: 0
+	// overflow: hidden
+
+	.comment-block 
+		margin: 0 auto
+		display: block
+		width: 90%
+		padding: 0 7% 2em 7%
+		
+		.comment-content 
+			width: 80%
+			background-color: rgba(255, 255, 255, 0.87)
+			padding: 3em 3.5em 2em 3.5em
+			border-radius: 10px
+			font-weight: bolder
+
+			div:last-child 
+				margin-left: 2em
+				opacity: .7
+				.comment-form-like 
+					display: inline-block
+
+		&:nth-child(even) 
+			.comment-content 
+				margin-left: auto
+				margin-right: 0
+
+	.testimonial-wrapper-form 
+		color: white
+		width: 60%
+		margin: 40px auto
+		padding: 1.5em 2em
+		border-radius: 10px
+		background-color: rgba(0, 0, 0, 0.87)
+		h4 
+			margin-top: 0
+		
+		input 
+			display: block
+			margin-bottom: 1em
+			background-color: #F2DCF7
+			color: black
+		
+		input:last-of-type 
+			width: 80%
+			height: 4em
+			display: inline-block
+			margin-bottom: 0
+		
+		button 
+			margin-left: 20px
+			background-color: #6D6D6E
+			display: inline-block
