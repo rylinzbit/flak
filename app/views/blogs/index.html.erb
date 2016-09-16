@@ -1,10 +1,19 @@
-<section class="blogs_page row">
-	<h1 class="slant-heading">Latest News and Thoughts</h1>
-	<% @blogs.reverse.each do |blog| %>
-		<div class="blog_post">
-			<p><img src="/assets/<%= blog.photo %>"></p>
-			<p><%= blog.created_at.strftime("%B %-d, %Y") %></p>
-			<p><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
-		</div>
-	<% end %>
+<section class="blogs-page row">
+	<div class="col-s-12">
+		<h1 id="blog-header" class="slant-heading ">Latest News and Thoughts</h1>
+		<ul class="blog-list col-s-12">
+			<% @blogs.reverse.each do |blog| %>
+
+					<li class="blog-post col-s-6">
+						<p><img src="/assets/<%= blog.photo %>"></p>
+						<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
+						<p><a class="blog-title" href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+						<p class="blog-content"><%= blog.content %></p>
+						<p class="blog-read-more"><a href="/show/<%=blog.id %>">[ Read more ...]</a></p>
+					</li>
+
+		<% end %>
+
+		</ul>
+	</div>
 </section>

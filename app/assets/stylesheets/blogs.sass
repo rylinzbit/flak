@@ -21,26 +21,69 @@
   border-bottom: 0.1rem solid $olive-green
   color: $olive-green
   padding: 0.5%
-  margin-bottom: 1%
   display: inline-block
-  
-/* - - Blog Heading - - - - - */
 
-h1
-  margin: 5% 18% 0 0
+.blogs-page
+  width: 1010px
+  margin: 0 auto
+/* -- Blog Heading -- -- -- */
+
+#blog-header
+  margin: 70px 30px 40px 0
   float: right
 
-/* - - Blog - - - - - */
-.blog_post
-  max-width: 30%
-  /*margin: 5% 0 1% 5%*/
-  background-color: $white
-  display: inline-block
-  vertical-align: top
-  img
-    max-width: 100%
+/* -- Blog -- -- -- */
+.blog-list
+  padding-top: 20px
 
-/* - - Blog Show - - - - */
+.blog-post
+  max-width: 450px
+  padding: 0
+  margin: 10px 20px 10px 0
+  color: black
+  text-align: left
+  background-color: $white
+  vertical-align: middle
+  box-shadow: 0px 0px 10px $light-gray
+  img
+    width: 100%  
+
+.blog-title
+  margin-left: 20px
+  font-size: 2.2em
+  font-family: $secondary-font-italic
+  color: $text-gray
+  border-bottom: 2px solid $text-gray
+
+.blog-title:hover
+  text-decoration: none
+  color: $light-green
+  border-bottom: 2px solid $light-green
+
+.blog-date
+  margin-left: 20px
+  margin-bottom: -5px
+  font-size: 0.85em
+  font-family: $text-font-italic
+
+.blog-content
+  width: 90%
+  min-height: 20px
+  max-height: 140px
+  margin: 10px auto
+  overflow: hidden
+  font-family: $text-font
+
+.blog-read-more
+  text-align: center
+  margin-bottom: 20px
+  cursor: pointer
+
+.blog-read-more a
+  color: $text-gray
+  font-size: 0.75em
+
+/* -- Blog Show -- -- */
 .blog_show
   padding: 0 6%
   img
@@ -57,31 +100,39 @@ h1
     font-size: 1.8rem
     color: $text-gray
 
+  .back-next-btns
+    width: 700px
+    margin: 0 auto
+
   .green_rectangle
     width: 80px
     height: 14px
-    margin-top: 2%
+    margin-top: 25px
     background-color: $olive-green
+
   .green_rectangle, .nav-btn
     display: inline-block
     vertical-align: middle
+    margin-bottom: 30px
+
   .nav-btn
     color: $olive-green
     font-family: $secondary-font
     font-size: 4.5rem
-  .next
-    text-align: right
-    padding-left: 6%
-  #front-rect
-    margin-left: 3.5%
 
-  /* - - BLOG COMMENTS - - */
+  .next 
+    margin-right: 30px
+
+  .next, #next-rect
+    float: right
+
+  /* -- BLOG COMMENTS -- */
   .comments
-    width: 70%
+    width: 65%
     max-height: 450px
-    margin: 7% 15% 0.2%
+    margin: 0 auto
     overflow: scroll
-    background-color: rgba($light-gray, 0.35)
+    background-color: rgba($sand, 0.45)
     font-family: $text-font-italic
     h4
       color: $light-green
@@ -90,27 +141,30 @@ h1
       padding: 1%
       margin: 0 2% 1%
       border-bottom: solid $white 0.1rem
+
     .individual-comment
       padding: 1% 3%
       margin: 0.5% 1%
       color: $text-gray
       font-size: 1.55rem
-      background-color: rgba($white, 0.6)
+      background-color: rgba($white, 0.8)
+
       .comment-name
         text-align: center
         margin-bottom: 0
         font-family: $secondary-font
         font-size: 1.75rem
+
       .comment-time
         text-align: center
         font-size: 1rem
 
-  /* - - BLOG ADD COMMENT - - */
+  /* -- BLOG ADD COMMENT -- */
   #add_comment
-    background-color: rgba($light-gray, 0.35)
-    width: 70%
+    background-color: rgba($sand, 0.45)
+    width: 65%
     padding: 1%
-    margin: 0 15%
+    margin: 0 auto
     h5
       font-family: $primary-font
       font-size: 3.5rem
@@ -118,12 +172,16 @@ h1
       margin: 0 0 .75% 1%
     p
       font-family: $text-font-italic
+    
+    input, textarea
+      border-radius: 2px
     .btn
-      font-family: $primary-font
-      font-size: 2rem
-      background-color: $dark-green
       color: $white
       padding-top: 0
+      font-size: 2rem
+      font-family: $primary-font
+      background-color: $dark-green
+      border: none
 
     
 
