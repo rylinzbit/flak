@@ -60,7 +60,8 @@ $light-gray: rgba(#989A97, 1)
 /* look at footer.sass to see how Sass variables work with @media and classes. Nesting is important */
 $tablet-lg: "(min-width: 992px) and (max-width: 1199px)"
 $tablet-md: "(min-width: 768px) and (max-width: 991px)"
-$mobile-lg: "(min-width: 481px) and (max-width: 767px)"
+$tablet-sm: "(min-width: 600px) and (max-width: 767px)"
+$mobile-lg: "(min-width: 481px) and (max-width: 599px)"
 $mobile-sm: "(max-width: 480px)"
 
 =paper-background 
@@ -79,6 +80,11 @@ html, body
 
   a:hover
     text-decoration: none
+
+  ul
+    padding: 0
+    li
+      padding: 0
 
 @import "header.sass"
 @import "footer.sass"
