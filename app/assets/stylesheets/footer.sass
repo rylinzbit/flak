@@ -12,6 +12,9 @@ footer
 .left-side-footer
   width: 370px
 
+  @media #{$tablet-md}
+    width: 240px
+
 .left-side-footer, .right-side-footer
   display: inline-block
   vertical-align: top
@@ -29,6 +32,9 @@ footer
 
 input[type=email]
   width: 270px
+
+  @media #{$tablet-md}
+    width: 140px
 
 .email-submit-btn
   background-color: $dark-green
@@ -55,7 +61,7 @@ input[type=email]
 
 .right-side-headings 
   width: 110px
-  margin-left: 10px
+  margin-left: 30px
   display: inline-block
   vertical-align: top
   text-align: right
@@ -63,8 +69,11 @@ input[type=email]
 
   @media #{$tablet-lg}
     width: 80px
-    margin-left: 15px
+    margin-left: 23px
     font-size: 3.3rem
+
+  @media #{$tablet-md}
+    margin-left: 5px
 
 .right-side-headings.contact
   width: 150px
