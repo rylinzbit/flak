@@ -12,6 +12,16 @@ footer
 .left-side-footer
   width: 370px
 
+  @media #{$tablet-md}
+    width: 240px
+
+  @media #{$tablet-sm}
+    width: 45px
+
+  form
+    @media #{$tablet-sm}
+      display: none
+
 .left-side-footer, .right-side-footer
   display: inline-block
   vertical-align: top
@@ -25,10 +35,19 @@ footer
   font-family: $media-icon-font
   font-size: 5.5rem
 
+  @media #{$tablet-sm}
+    width: 40px
+    margin-top: 6px
+    font-size: 4.3rem
+    line-height: 33px
+
 /* -- - - EMAIL SUBSCRIPTION  - - -- */
 
 input[type=email]
   width: 270px
+
+  @media #{$tablet-md}
+    width: 140px
 
 .email-submit-btn
   background-color: $dark-green
@@ -55,7 +74,7 @@ input[type=email]
 
 .right-side-headings 
   width: 110px
-  margin-left: 10px
+  margin-left: 30px
   display: inline-block
   vertical-align: top
   text-align: right
@@ -63,8 +82,15 @@ input[type=email]
 
   @media #{$tablet-lg}
     width: 80px
-    margin-left: 15px
+    margin-left: 23px
     font-size: 3.3rem
+
+  @media #{$tablet-md}
+    margin-left: 5px
+
+  @media #{$tablet-sm}
+    width: 85px
+    font-size: 3rem
 
 .right-side-headings.contact
   width: 150px

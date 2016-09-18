@@ -13,49 +13,72 @@
   font-family: latoThin
 
 .slant-heading
-  font-family: $secondary-font-italic
+  color: $olive-green
+  padding: 0.5%
   font-size: 4.8rem
+  font-family: $secondary-font-italic
   text-align: center
+  text-shadow: 1px 2px 4px rgba($light-gray, 0.7)
+  display: inline-block
   letter-spacing: 0.15rem
   border-top: 0.1rem solid $olive-green
   border-bottom: 0.1rem solid $olive-green
-  color: $olive-green
-  padding: 0.5%
-  display: inline-block
 
 .blogs-page
-  width: 1010px
+  // width: 1010px
   margin: 0 auto
 /* -- Blog Heading -- -- -- */
 
 #blog-header
-  margin: 70px 30px 40px 0
+  margin: 50px 20px 10px 0
   float: right
 
+  @media #{$tablet-lg}
+    font-size: 3.9rem
+  @media #{$tablet-sm}
+    font-size: 3.3rem
+
 /* -- Blog -- -- -- */
-.blog-list
-  padding-top: 20px
+.blog-list-even
+  float: right
+  margin-top: 20px
+
+.blog-list-even .blog-post:first-child
+  margin-top: 20px
+
+.blog-list-odd .blog-post:first-child
+  margin-top: 20px
 
 .blog-post
   max-width: 450px
-  padding: 0
-  margin: 10px 20px 10px 0
+  padding-bottom: 7px
+  margin: 60px 0
   color: black
   text-align: left
   background-color: $white
+  list-style-type: none
   vertical-align: middle
   box-shadow: 0px 0px 10px $light-gray
   img
-    width: 100%  
+    width: 100%
+    // max-height: 600px 
+
+  @media #{$tablet-md}
+    margin: 40px 0
 
 .blog-title
-  margin-left: 20px
+  padding: 0 20px
+
+.blog-title a
+  color: $text-gray
   font-size: 2.2em
   font-family: $secondary-font-italic
-  color: $text-gray
   border-bottom: 2px solid $text-gray
 
-.blog-title:hover
+  @media #{$tablet-md}
+    font-size: 1.9em
+
+.blog-title a:hover
   text-decoration: none
   color: $light-green
   border-bottom: 2px solid $light-green
@@ -74,10 +97,19 @@
   overflow: hidden
   font-family: $text-font
 
+  @media #{$tablet-md}
+    max-height: 103px
+
+  @media #{$tablet-sm}
+    max-height: 64px
+
 .blog-read-more
   text-align: center
   margin-bottom: 20px
   cursor: pointer
+
+  @media #{$tablet-sm}
+    margin-bottom: 10px
 
 .blog-read-more a
   color: $text-gray

@@ -1,19 +1,35 @@
 <section class="blogs-page row">
-	<div class="col-s-12">
-		<h1 id="blog-header" class="slant-heading ">Latest News and Thoughts</h1>
-		<ul class="blog-list col-s-12">
-			<% @blogs.reverse.each do |blog| %>
-
-					<li class="blog-post col-s-6">
-						<p><img src="/assets/<%= blog.photo %>"></p>
-						<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
-						<p><a class="blog-title" href="/show/<%=blog.id %>"><%= blog.title %></a></p>
-						<p class="blog-content"><%= blog.content %></p>
-						<p class="blog-read-more"><a href="/show/<%=blog.id %>">[ Read more ...]</a></p>
-					</li>
-
-		<% end %>
-
-		</ul>
+	<div class="col-xs-12 col-md-10 col-md-offset-1">
+		<div class="col-xs-6 col-sm-5 col-sm-offset-1">
+			<ul class="blog-list-odd">
+			<% @blogs.reverse.each.with_index(1) do |blog, index| %>
+				<% if index.odd? %>
+						<li class="blog-post">
+							<p><img src="/assets/<%= blog.photo %>"></p>
+							<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
+							<p class="blog-title"><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+							<p class="blog-content"><%= blog.content %></p>
+							<p class="blog-read-more"><a href="/show/<%=blog.id %>">[ Read more ...]</a></p>
+						</li>
+				<% end %>
+			<% end %>
+			</ul>
+		</div>
+		<div class="col-xs-6 col-sm-5">
+			<h1 id="blog-header" class="slant-heading">Latest News and Thoughts</h1>
+			<ul class="blog-list-even">
+			<% @blogs.reverse.each.with_index(1) do |blog, index| %>
+				<% if index.even? %>
+						<li class="blog-post">
+							<p><img src="/assets/<%= blog.photo %>"></p>
+							<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
+							<p class="blog-title"><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+							<p class="blog-content"><%= blog.content %></p>
+							<p class="blog-read-more"><a href="/show/<%=blog.id %>">[ Read more ...]</a></p>
+						</li>
+				<% end %>
+			<% end %>
+			</ul>
+		</div>
 	</div>
 </section>
