@@ -3,17 +3,21 @@
 <head>
   <title>FLAK</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body class="container-fluid">
 	<header class="top-nav row">
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li><a href="/blogs">Blog</a></li>
-			<li><a href="/classes">Class</a></li>
-			<li><a href="/about">About</a></li>
-			<li><a href="/contact">Contact</a></li>
+		<ul class="">
+			<li class=""><a href="/">Home</a></li>
+			<li class=""><a href="/blogs">Blog</a></li>
+			<li class=""><a href="/classes">Class</a></li>
+			<li class=""><a href="/about">About</a></li>
+			<li class=""><a href="/contact">Contact</a></li>
 		</ul>
 	</header>
 	
@@ -43,12 +47,11 @@
 			</form>
 		</section>
 		<section class="right-side-footer">
-			<ul>
+			<ul class="right-side-main-ul">
 				<li class="right-side-headings"><a href="/">Home</a></li>
 				<li class="right-side-headings"><a href="/blogs">Blog</a>
 					<ul class="footer-small-links">
 						<li><a href="/most_recent">Most&nbspRecent</a></li>
-						<li><a href="">Archive</a></li>
 					</ul>
 				</li>
 				<li class="right-side-headings"><a href="">Press</a>
@@ -56,6 +59,8 @@
 						<li><a href="">News</a></li>
 						<li><a href="">Articles</a></li>
 						<li><a href="/testimonials">Testimonials</a></li>
+						<li><a href="">Gallery</a></li>
+						<li><a href="">Happenings</a></li>
 					</ul>
 				</li>
 				<li class="right-side-headings"><a href="">Legal</a>
@@ -64,10 +69,14 @@
 						<li><a href="">Agreements</a></li>
 					</ul>
 				</li>
-				<li class="right-side-headings"><a href="/contact">Contact</a>
+				<li class="right-side-headings contact"><a href="/contact">Contact</a>
 					<ul class="footer-small-links">
 						<li>( 818 ) 303-5895</li>
-						<li>Swordmaster@FightLikeAKnight.com</li>
+						<li class="flak-email">
+							<a>Swordmaster<span class="at-symbol">@</span>
+							<br />
+							FightLikeAKnight.com</a>
+						</li>
 					</ul>
 				</li>
 			</ul>

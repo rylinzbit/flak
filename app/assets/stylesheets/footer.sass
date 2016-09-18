@@ -1,65 +1,110 @@
-
-
+/* -- FOOTER WEB -- */
 footer
-  min-height: 20%
+  height: 150px
   width: 100%
   background: rgba(135, 163, 135, 0.5)
-  padding: 0.3% 0 0.3% 4%
-  margin-top: 3%
+  padding: 0 5px 10px 15px
+  margin-top: 40px
   position: absolute
-
   font-family: alienandcows
-  .left-side-footer
-    width: 33%
-  .right-side-footer
-    width: 64%
-    margin-top: 0.5%
-  .left-side-footer, .right-side-footer
-    display: inline-block
-    vertical-align: top
+
+/* -- - - LEFT SIDE FOOTER - - -- */
+.left-side-footer
+  width: 370px
+
+  @media #{$tablet-md}
+    width: 240px
+
+  @media #{$tablet-sm}
+    width: 45px
+
+  form
+    @media #{$tablet-sm}
+      display: none
+
+.left-side-footer, .right-side-footer
+  display: inline-block
+  vertical-align: top
   a
-    text-decoration: none
     color: $off-white
+
   a:hover
-    text-decoration: none
     color: $light-gray
 
 .social-media-icons
   font-family: $media-icon-font
   font-size: 5.5rem
 
-/* - - Styling for email subscription  - - - - */
+  @media #{$tablet-sm}
+    width: 40px
+    margin-top: 6px
+    font-size: 4.3rem
+    line-height: 33px
 
-.email-submit-btn
-  margin-left: -2%
-  background-color: $dark-green
-  color: $white
+/* -- - - EMAIL SUBSCRIPTION  - - -- */
 
 input[type=email]
-  width: 60%
+  width: 270px
+
+  @media #{$tablet-md}
+    width: 140px
+
+.email-submit-btn
+  background-color: $dark-green
+  color: $white
+  margin-left: -5px
 
 .email-submit-btn, input[type=email]
   border: none
   font-size: 2rem
-  padding: 0 2% 2% 2%
-  margin-top: -2%
-  display: inline-block
-  vertical-align: top
+  padding: 0 10px 7px 10px
 
-/* - - Styling for right side links - - - - */
+/* -- - - RIGHT SIDE FOOTER - - -- */
+.right-side-footer
+  float: right
+  margin-right: 30px
 
-li
+  @media #{$tablet-lg}
+    margin: 15px 20px 0 0
+
+.right-side-footer li
+  color: $white
   text-align: right
   list-style-type: none
-  color: $white
-  margin-left: 3%
 
-.right-side-headings
+.right-side-headings 
+  width: 110px
+  margin-left: 30px
   display: inline-block
   vertical-align: top
+  text-align: right
   font-size: 3.8rem
 
+  @media #{$tablet-lg}
+    width: 80px
+    margin-left: 23px
+    font-size: 3.3rem
+
+  @media #{$tablet-md}
+    margin-left: 5px
+
+  @media #{$tablet-sm}
+    width: 85px
+    font-size: 3rem
+
+.right-side-headings.contact
+  width: 150px
+
+  @media #{$tablet-lg}
+    width: 120px
+
 .footer-small-links
-  line-height: 115%
-  font-family: $secondary-font
   font-size: 1.8rem
+  font-family: $secondary-font
+  line-height: 115%
+  
+  @media #{$tablet-lg}
+    font-size: 1.65rem
+
+.at-symbol
+  font-family: $text-font

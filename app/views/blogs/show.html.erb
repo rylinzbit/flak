@@ -1,22 +1,24 @@
 <section class="blog_show">
-	<p><img src="/assets/<%= @blog.photo %>"></p>
-	<p class="lato-it"><%= @blog.updated_at.strftime("%B %-d, %Y") %></p>
-	<p class="slant-heading"><%= @blog.title %></p>
-	<p class="blog_content lato"><%= @blog.content %></p>
+	<div class="row">
+		<p><img src="/assets/<%= @blog.photo %>"></p>
+		<p class="lato-it"><%= @blog.updated_at.strftime("%B %-d, %Y") %></p>
+		<p class="slant-heading"><%= @blog.title %></p>
+		<p class="blog_content lato"><%= @blog.content %></p>
+	</div>
 	
 	<!-- BACK AND NEXT BTNS -->
-	<section class="row">
+	<section class="back-next-btns row">
 		<div id="back-rect" class="green_rectangle col-lg-1"></div>
 		<% if @blog.id  %>
-		<a href="/blogs" class="nav-btn col-lg-1">Back</a>
+			<a href="/blogs" class="nav-btn col-lg-1">Back</a>
 		<% end %>
+		<div id="next-rect" class="green_rectangle"></div>
 		<% if @blog.id > 1 %>
 			<a href="/show/<%= @blog.id - 1 %>" class="nav-btn next col-lg-1">Next</a>
 		<% else %>
 			<a href="/blogs" class="nav-btn next col-lg-1">Next</a>
 		<% end %>
 
-		<div id="front-rect" class="green_rectangle"></div>
 	</section>
 
 	<!-- COMMENTS SECTION -->
