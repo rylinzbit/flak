@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  # get 'intro/index'
 
-  root "intro#index"
+  # get "intro#index"
+  root "main#home"
 
-  get '/' => 'main#index'
+
+  get '/' => 'main#home'
   post '/create_email' => 'main#create_email'
 
   get '/blogs' => 'blogs#index'
