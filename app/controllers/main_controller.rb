@@ -1,7 +1,7 @@
 class MainController < ApplicationController
 
-	def index
-		
+	def home
+		@blogs = Blog.order('created_at DESC').limit(3)
 	end
 
 	def create_email
