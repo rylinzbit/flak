@@ -1,53 +1,218 @@
+body.container-fluid 
+  padding: 0
+
+.fullscreen 
+  position: relative
+  width: 100% 
+  height: 530px
+  overflow: hidden
+  top: 0 
+  left: 0
+  position: relative
+  width: 100%
+  height: 100vh
+
+.first-section 
+  height: 530px
+  overflow: hidden
+  margin-bottom: 20px
+#field-bg 
+  margin-top: -46px
+  width: 75%
+  position: absolute
+  animation: moveFieldFight 1s
+
+@keyframes moveFieldFight
+  0%
+    left: -800px
+  100%    
+    left: 0px
+
+.first-section-rhombus 
+  border-top: 530px solid #565B56    
+  border-left: 100px solid transparent
+  width: 500px
+  position: absolute
+  box-shadow: 10px 10px 5px #888888
+  right: 0
+  animation: moveRhombus 1s
+
+@keyframes moveRhombus 
+  0% 
+    right: -1000px
+  100%
+    right: -10px         
+#rhombus-texture
+  position: absolute
+  width: 100%
+#helmet-bg 
+  position: absolute
+  width: 1150px
+  margin-top: -49px
+  left: -440px
+
+  animation: staticHelmet 4s ease-in-out infinite
+
+@keyframes staticHelmet
+  0%
+    left: -440px
+    top: 0
+  50%
+    left: -450px
+    top: 3px
+  100%
+    left: -440px 
+    top: 0 
+   
+.first-section-detail 
+  position: absolute
+  right: 40px 
+  color: white
+  padding-top: 40px
+  opacity: 0
+
+  animation: firstSectiondetail 1500ms ease-in forwards
+  animation-delay: 1s
+
+            
+.first-section-detail 
+  h1 
+    font-size: 5.2em
+    font-family: enchanted_land
+  p 
+    width: 365px
+    font-size: 1.4em
+    text-align: right
+    float: right
+    font-family: robotoLight
+
+@keyframes firstSectiondetail
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.social-icons  
+  bottom: 30px
+  position: fixed
+  width: 300px
+
+  .scroll-nav 
+    font-family: alienandcows
+    display: inline-block
+    position: fixed
+    bottom: 20px
+    left: 45%    
+    h3 
+      display: inline-block
+      padding: 0 15px
+
 .home-page
-	padding: 20px
+  padding: 0 40px
 
 .home-welcome
-	padding: 20px 40px
-	background: white
-	color: $dark-green
+  padding: 20px 40px
+  margin-left: 30px
+  background: rgba(white, 0.85)
+  color: $dark-green
+  box-shadow: $drop-2
 
-	h1
-		font-size: 3.3em
-		font-family: $secondary-font
+  h1
+    margin-left: 20px
+    font-size: 3.3em
+    font-family: $secondary-font
 	
-	h4
-		padding: 10px 35px 25px
-		line-height: 30px
-		font-family: $text-font
+  h4
+    padding: 10px 35px 25px
+    line-height: 30px
+    font-family: $text-font
 
-	h4 span
-		font-size: 1.3em
-		font-weight: bold
+  h4 span
+    font-size: 1.3em
+    font-weight: bold
 
 .home-updates
-	font-family: $secondary-font-italic
-	margin-left: 30px
-	h1
-		color: $olive-green
-		opacity: 0.7
-		font-size: 3em
+  font-family: $secondary-font-italic
+  margin-left: 50px
+  h1
+    color: $olive-green
+    opacity: 0.7
+    font-size: 3em
 
 .update-underlay
-	position: absolute
-	z-index: 1
-	ul
-		margin-left: 5px
+  position: absolute
+  z-index: 1
+  ul
+    margin-left: 5px
 
 .updates-overlay
-	margin-left: 5px
-	z-index: 1000
+  margin-left: 5px
+  z-index: 1000
 
 .update-underlay, .updates-overlay
-	width: 350px
-	height: 175px
-	padding: 25px 0 25px 25px
-	overflow: scroll
-	background-color: rgba($olive-green, 0.2)
-	color: rgba(250,250,250, 1)
-	font-size: 1.5em
-	li
-		list-style-type: none
-		margin-bottom: 5px
-		span
-			margin-right: 15px
-			font-size: 0.7em
+  width: 350px
+  height: 175px
+  padding: 25px 0 25px 25px
+  font-size: 1.5em
+  color: rgba(250,250,250, 1)
+  background-color: rgba($dark-green, 0.25)
+  overflow: scroll
+  li
+    list-style-type: none
+    margin-bottom: 5px
+    span
+      margin-right: 15px
+      font-size: 0.8em
+
+.home-recent-blogs
+  padding: 30px 0 30px 30px
+  margin-left: 20px
+
+.home-recent-blogs .main
+  margin: 35px 15px
+
+.home-title
+  width: 15px
+  text-align: center
+  line-height: 30px
+  color: $olive-green
+  font-size: 1.3em
+  font-family: $secondary-font
+  display: inline-block
+  word-break: break-all
+
+.home-recent-blogs .title:last-child
+  margin-top: 15px
+
+.home-single-blog
+  display: inline-block
+  vertical-align: top
+  width: 230px
+  height: 300px
+  margin-right: 15px
+  color: black
+  text-align: left
+  background-color: $white
+  box-shadow: $drop-1
+  img
+    width: 100%
+    max-height: 116px
+  .blog-date
+    font-size: 0.7em
+  .blog-title
+    padding: 0 10px
+    margin: 7px 0
+  .blog-title a
+    font-size: 1.3em
+  .blog-content
+    font-size: 0.8em
+    max-height: 93px
+
+.home-instagram
+  margin: 20px 0 0 60px
+
+.home-title.instagram
+  width: 10px
+  margin-top: 15px 
+  font-size: 1.4em
+  line-height: 25px

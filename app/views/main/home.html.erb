@@ -1,23 +1,58 @@
+<div class="fullscreen first-section scroller"> 
+  <img id="field-bg" src="assets/field_fight.jpg" alt="field_fight" />
+  <img id="helmet-bg" src="assets/helmet1.png" alt="helmet" />
+  <div class="first-section-rhombus"></div>
+  <div class="first-section-detail">
+    <h1>Fight Like A Knight</h1>
+    <p>“Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClin, a Latin professor at Hampden College Virginia, looked up one of the mo Latin words, consectetur, from a Lorem”<br/> - Chris Burns</p>
+  </div>
+<!--         <div class="scroll-nav">
+        <h3>Skip Intro</h3>
+    </div> -->
+</div>
 <section class="home-page row">
-	<div class="home-welcome col-md-6 col-md-offset-1">
-		<h1>Welcome</h1>
-		<h4><span>You've reached the home of Fight Like A Knight</span>, a place where fantasy becomes reality and your inner warrior comes out to play. Learn authentic weapon fighting techniques and styles in a live class with simulated sparring with other knights just like you.</h4>
+	<div class="row">
+		<div class="home-welcome col-md-7">
+			<h1>Welcome</h1>
+			<h4><span>You've reached the home of Fight Like A Knight</span>, a place where fantasy becomes reality and your inner warrior comes out to play. Learn authentic weapon fighting techniques and styles in a live class with simulated sparring with other knights just like you.</h4>
+		</div>
+		<div class="home-updates col-md-4">
+			<h1>Recent Updates</h1>
+			<div class="update-underlay">
+				<ul>
+					<li><span>MAR 12</span> update here</li>
+					<li><span>MAR 10</span> No class</li>
+					<li><span>MAR 3</span> yippee</li>
+				</ul>
+			</div>
+			<div class="updates-overlay">
+				<ul>
+					<li><span>MAR 12</span> update here</li>
+					<li><span>MAR 10</span> No class</li>
+					<li><span>MAR 3</span> yippee</li>
+				</ul>
+			</div>
+		</div>
 	</div>
-	<div class="home-updates col-md-4">
-		<h1>Recent Updates</h1>
-		<div class="update-underlay">
-			<ul>
-				<li><span>MAR 12</span> update here</li>
-				<li><span>MAR 10</span> No class</li>
-				<li><span>MAR 3</span> yippee</li>
-			</ul>
+	<div class="row">
+		<div class="home-recent-blogs col-md-7">
+			<div class="home-title main">
+				<p class="home-title">New</p>
+				<p class="home-title"> Blogs</p>
+			</div>
+			<% @blogs.each do |blog| %>
+				<div class="home-single-blog">
+					<p><img src="/assets/<%= blog.photo %>"></p>
+					<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
+					<p class="blog-title"><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+					<p class="blog-content"><%= blog.content %></p>		
+				</div>
+			<% end %>
 		</div>
-		<div class="updates-overlay">
-			<ul>
-				<li><span>MAR 12</span> update here</li>
-				<li><span>MAR 10</span> No class</li>
-				<li><span>MAR 3</span> yippee</li>
-			</ul>
+		<div class="home-instagram col-md-3">
+			<!-- LightWidget WIDGET -->
+			<script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/f41b476ce5b852c291676eb1b4079714.html" id="lightwidget_f41b476ce5" name="lightwidget_f41b476ce5"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 		</div>
+		<p class="home-title instagram">Instagram</p>
 	</div>
 </section>
