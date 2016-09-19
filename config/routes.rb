@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root "main#index"
+  root "main#home"
 
-  get '/' => 'main#index'
+  get '/' => 'main#home'
   post '/create_email' => 'main#create_email'
 
   get '/blogs' => 'blogs#index'
