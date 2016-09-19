@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root "main#index"
+  # get 'intro/index'
+
+  root "intro#index"
 
   get '/' => 'main#index'
   post '/create_email' => 'main#create_email'

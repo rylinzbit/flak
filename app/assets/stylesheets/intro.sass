@@ -1,0 +1,251 @@
+// Place all the styles related to the Intro controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.glyphicon 
+    position: fixed !important
+    z-index: 500
+    color: grey
+    margin: 15px 0 0 15px
+    font-size: 30px
+#playButton 
+    margin-left: 70px    
+.fight-wrapper 
+    width: 100%
+    height: 93%
+    overflow: hidden
+    position: absolute
+    animation: moveScreen 2s ease-in 12300ms forwards
+    h1
+        position: absolute
+        bottom: 40px
+        color: black
+        font-size: 6em
+        left: 210px
+    @keyframes moveScreen
+        0%
+            transform: scale(1)
+        100%
+            transform: scale(25)
+.screenGrow
+
+#fight-screen 
+    width: 100vw
+    margin-top: -70px
+    position: absolute
+
+.fight-overlay
+    position: absolute
+    width: 100%
+    height: 800px
+    z-index: 400
+    opacity: .3
+#music
+    visibility: none
+    position: absolute
+.what-is-flak 
+    width: 100%
+    text-align: center
+    opacity: 0
+    
+    animation: showWAFWrapper 5s ease-in 12500ms forwards
+    @keyframes showWAFWrapper
+        0%
+            opacity: 0
+        10%
+            opacity: 1
+        90%
+            opacity: 1 
+        100%
+            opacity: 0    
+    
+    .what-is-flak 
+    h1 
+        font-family: alienandcows
+        position: relative
+        font-size: 6em
+
+.section-2-block-wrapper 
+    text-align: center
+    display: inline-block
+    margin-left: -327px
+
+    .section-2-blocks
+        width: 340px
+        height: 495px
+        position: absolute
+        display: inline-block
+        overflow: hidden
+        img 
+            position: absolute
+            min-width: 340px
+            left: 0
+        .section-2-block-detail 
+            background-color: rgba(0, 0, 0, .35)
+            position: absolute
+            width: 280px
+            height: 190px
+            margin: 0 auto
+            bottom: 25px
+            left: 30px
+            padding: 30px
+            border-radius: 5px
+            h1
+                font-size: 3em
+                text-align: left
+                color: white
+                margin: 0
+                line-height: 40px
+                position: absolute
+                z-index: 101
+        .section-2-block-detail-2
+            background-color: rgba(0, 0, 0, .35)
+            position: absolute
+            width: 280px
+            height: 190px
+            margin: 0 auto
+            bottom: 25px
+            left: 30px
+            padding: 30px
+            border-radius: 5px
+            h1
+                font-size: 3em
+                text-align: center
+                color: white
+                margin: 0 0 0 50px
+                line-height: 40px 
+                position: absolute 
+                z-index: 101      
+        .section-2-block-detail-3 
+            background-color: rgba(0, 0, 0, .35)
+            position: absolute
+            width: 280px
+            height: 190px
+            margin: 0 auto
+            bottom: 25px
+            left: 30px
+            padding: 30px
+            border-radius: 5px
+            h1
+                font-size: 3em
+                text-align: right
+                color: white
+                margin: 0
+                line-height: 40px    
+                position: absolute
+                z-index: 101
+    .section-2-blocks-overlay-one, .section-2-blocks-overlay-two, .section-2-blocks-overlay-three 
+        width: 340px
+        height: 495px
+        background-color: rgba(203, 196, 191, 1)
+        position: absolute
+        opacity: .17
+        z-index: 100
+
+.one
+    animation: moveBlockOne 400ms ease-in 12800ms forwards
+
+@keyframes moveBlockOne
+    0%
+        left: 345px
+    100%
+        left: 117px     
+.three
+    animation: moveBlockThree 400ms ease-in 12800ms forwards
+
+@keyframes moveBlockThree
+    0%
+        left: 495px
+    100%
+        left: 807px 
+.experience-wrapper
+    height: 670px
+    overflow: hidden
+    position: absolute
+    opacity: 0
+    top: 0
+
+    animation: showExperience 5s ease-in 18000ms forwards
+    @keyframes showExperience
+        0%
+            opacity: 0
+        20%
+            opacity: 1
+        90%
+            opacity: 1 
+        100%
+            opacity: 0 
+.experience-overlay
+    width: 100%
+    height: 100vh
+    background-color: rgba(203, 196, 191, 1)
+    position: absolute
+    opacity: .17
+    z-index: 100     
+#experience-bg 
+    width: 100%
+.experience-side-block
+    height: 100vh
+    background-color: #DDD2B1
+    opacity: .4
+    position: absolute 
+
+    animation: sidebarGrow 1s ease-in 18000ms forwards
+    @keyframes sidebarGrow
+        0%
+            width: 0
+        100% 
+            width: 300px      
+.experience-bottom-block
+    bottom: 0
+    padding-top: 20px
+    text-align: center
+    width: 100%
+    position: absolute
+    background-color: rgba(250, 250, 250, .5)
+
+    animation: bottomBlockGrow 1s ease-in 18000ms forwards
+    @keyframes bottomBlockGrow
+        0%
+            height: 0
+        100%
+            height: 120px    
+    h1
+        left: -100px
+        position: absolute 
+        animation: moveBottomHeader 1s ease-in 18000ms forwards
+        @keyframes moveBottomHeader
+            0%
+                left: -100px
+            100%
+                left: 440px    
+#shield
+    width: 500px
+    position: absolute
+    bottom: 0
+    z-index: 600
+
+    animation: moveShield 5s ease-in 18000ms forwards
+    @keyframes moveShield
+        0%
+            left: -300px
+            bottom: -300px
+            transform: rotate(90deg)  
+        15%
+            left: -100px
+            bottom: -100px
+            transform: rotate(0deg)
+        90%
+            left: -100px
+            bottom: -100px
+            transform: rotate(0deg) 
+        100%
+            left: -200px
+            bottom: -200px
+            transform: rotate(270deg) 
+
+
+
+
+
+
+

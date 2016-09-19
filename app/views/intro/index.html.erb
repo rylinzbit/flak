@@ -1,0 +1,67 @@
+<script>
+    $(document).ready(function() {
+      $('.fight-wrapper').delay(12500).fadeOut();
+      setTimeout(function(){
+        document.getElementById("music").play();
+      }, 1300);
+      
+    });
+  $(window).load(function() {
+
+
+      document.getElementById('stopButton').onclick = function() {
+        var sounds = document.getElementsByTagName('audio');
+        for(i=0; i<sounds.length; i++) sounds[i].pause();
+      };
+      document.getElementById('playButton').onclick = function() {
+        var sounds = document.getElementsByTagName('audio');
+        for(i=0; i<sounds.length; i++) sounds[i].play();
+      };
+
+  });
+</script>
+  <audio preload="auto" controls src="assets/Killers.mp3" type='audio/mp3' id="music"></audio>
+  <i class="glyphicon glyphicon-volume-off" id="stopButton"></i>
+  <i class="glyphicon glyphicon-volume-up" id="playButton"></i>
+<div class="fight-wrapper">
+  <img class="fight-overlay" src="assets/paper_texture.png">
+  <img id="fight-screen" src="assets/fight.png" alt="">
+  <h1>FIGHT LIKE A KNIGHT</h1>
+  <video id="fight-video" width="100%" height="100%" src="assets/headsmack.mov" autoplay="true"></video>
+</div>
+<div class="what-is-flak">
+    <h1>What is Flak?</h1>
+    <div class="section-2-block-wrapper">
+        <div class="section-2-blocks one">
+            <div class="section-2-blocks-overlay-one"></div>
+            <img src="assets/tinaCropped.png" />
+            <div class="section-2-block-detail">
+                <h1>A New Way <br />to Get <br />Fit</h1>
+            </div>
+        </div>  
+        <div class="section-2-blocks two">
+            <div class="section-2-blocks-overlay-two"></div>
+            <img src="assets/sword.png" />
+            <div class="section-2-block-detail-2">
+                <h1>Culture <br />& <br />History</h1>
+            </div>
+        </div>  
+        <div class="section-2-blocks three">
+            <div class="section-2-blocks-overlay-three"></div> 
+            <img src="assets/beehat.jpg" />
+            <div class="section-2-block-detail-3">
+                <h1>Real Weapon<br />Fighting<br />Techniques</h1>
+            </div>
+        </div>  
+    </div>    
+</div>
+<div class="experience-wrapper">
+  <div class="experience-overlay"></div>
+  <div class="experience-side-block"></div>
+  <img id="shield" src="assets/gray_shield.png" alt="">
+  <div class="experience-bottom-block">
+    <h1>Experience a whole new world</h1>
+  </div>
+  <img id="experience-bg" src="assets/walking.png" alt="">
+
+</div>
