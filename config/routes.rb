@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   devise_for :admins do
   end
 
-  root "main#index"
+  root "main#home"
 
-  get '/' => 'main#index'
+  get '/' => 'main#home'
   post '/create_email' => 'main#create_email'
 
   get '/blogs' => 'blogs#index'
