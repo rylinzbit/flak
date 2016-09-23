@@ -39,3 +39,6 @@ Testimonial.create(content: "HE DOES STUFF", name: "TEST NAME", projects: "PROJE
 Testimonial.create(content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", name: "SEGUNDO TEST", projects: "PROJECT PROTECT 2", likes: 0)
 Testimonial.create(content: "Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.", name: "TEST AAA", projects: "PROJECT AAA", likes: 2)
 Testimonial.create(content: "We are here to test...sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.", name: "MASTER", projects: "Changing Tire, Baking with butter", likes: 0)
+
+# Admin
+admin = Admin.create! :email => 'admin@email.com', :password => 'password', :password_confirmation => 'password'

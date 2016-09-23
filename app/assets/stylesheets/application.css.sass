@@ -83,15 +83,20 @@ $drop-2: 0px 0px 8px rgba($light-gray, 0.2) /* home welcome section box-shadow *
   background-attachment: fixed
   width: 100%
   position: fixed
-  overflow: scroll
 
 html, body
   margin: 0
   padding: 0
   width: 100%
   height: 100%
+  overflow-y: scroll
+  overflow-x: hidden
   +paper-background
 
+html
+  overflow: hidden
+
+body
   a:hover
     text-decoration: none
 
