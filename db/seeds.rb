@@ -28,3 +28,14 @@ BlogComment.create(name: "Anonymous", comment: "To be or not to be.... I still d
 BlogComment.create(name: "The Pool", comment: "Golly-gee... I'm wet.", blog_id: 1)
 BlogComment.create(name: "The Beach", comment: "I am pretty sure I have crabs", blog_id: 1)
 BlogComment.create(name: "Hero", comment: "Its pronounced heh-row not hero. get it right", blog_id: 4)
+
+
+# Testimonials
+Testimonial.create(content: "BEFORE I WAS AN ACTOR, I WAS A COLLEGIATE FENCER. I FENCED ONSTAGE FOR SEVERAL YEARS DOING SHAKESPEARE AND EVEN CHOREOGRAPHED FIGHT SEQUENCES MYSELF. IN ALL MY YEARS OF EXPERIENCE, CHRISTOPHER BURNS IS ONE OF THE VERY BEST SWORDPLAY EXPERTS I'VE EVER WORKED WITH. I'VE PUT MY LIFE AND SHOW IN HIS HANDS BEFORE AND WOULD HAPPILY DO IT AGAIN", name: "JIM BEAVER", projects: "SUPERNATURAL, DEADWOOD, THE LION IN WINTER", likes: 6)
+Testimonial.create(content: "WE ARE SO GLAD THAT WE HAD THE CHANCE TO WORK WITH THE MULTI-TALENTED CHRISTOPHER BURNS! HE MASTERFULLY CHOREOGRAPHED A FIGHT SEQUENCE AND TAUGHT IT TO TWO OF OUR ACTORS FOR OUR FINALE, THEN WAS ON-HAND ON SET TO ENSURE THAT EACH MOVE WAS REALISTIC, SAFE, AND LOOKED AMAZING. HE BROUGHT OUR TALE TO LIFE.", name: "PAULA RHODES", projects: "A GOOD KNIGHT'S QUEST, THE LION IN WINTER", likes: 7)
+Testimonial.create(content: "CHRIS IS PROFESSIONAL, KNOWLEDGEABLE AND SAFE. WHEN IT COMES TO SWORD FIGHTING, HE GETS IT. I DID A SHOOT WITH CHRIS WHERE WE HAD A SHORT WINDOW FOR TRAINING AND WERE WORKING WITH COMBATANTS OF VARYING SKILL LEVELS. THANKS TO CHRIS, THE DIRECTOR GOT A GREAT FIGHT AND EVERYONE LEFT WITH ALL THEIR FINGERS AND HEADS. HE'S A PRO!", name: "DOUGLAS SARINE", projects: "ASK A NINJA, A GOOD KNIGHT'S QUEST", likes: 1)
+Testimonial.create(content: "CHRIS IS THE BEST AT PLAYING WITH SWORDS. I'VE SEEN HIM HANDLE TWO AT A TIME WITHOUT MISSING A BEAT.", name: "APPLE WATSON", projects: "BEAT STREET 2, GAME OF THONGS", likes: 1)
+Testimonial.create(content: "HE DOES STUFF", name: "TEST NAME", projects: "PROJECT 1", likes: 1)
+Testimonial.create(content: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", name: "SEGUNDO TEST", projects: "PROJECT PROTECT 2", likes: 0)
+Testimonial.create(content: "Sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in.", name: "TEST AAA", projects: "PROJECT AAA", likes: 2)
+Testimonial.create(content: "We are here to test...sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.", name: "MASTER", projects: "Changing Tire, Baking with butter", likes: 0)

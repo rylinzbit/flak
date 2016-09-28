@@ -34,6 +34,10 @@
 @font-face
   font-family: latoThin
   src: font-url('Lato-Thin.ttf') format("truetype")
+// @font-face
+//   font-family: 'Glyphicons Halflings'
+//   src: url('/assets/glyphicons-halflings-regular.eot')
+//   src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg')
 @font-face
   font-family: enchanted_land
   src: font-url('Enchanted_Land.ttf') format("truetype")
@@ -76,6 +80,7 @@ $drop-2: 0px 0px 8px rgba($light-gray, 0.2) /* home welcome section box-shadow *
 =paper-background 
   background: image-url('paper_texture.png') 
   background-size: 100% 
+  background-attachment: fixed
   width: 100%
   position: fixed
   overflow: scroll
@@ -95,10 +100,12 @@ html, body
     li
       padding: 0
 
+@import "bootstrap-sprockets"
+@import "bootstrap"
 @import "header.sass"
 @import "footer.sass"
 @import "blogs.sass"
-@import "testimonials.scss"
-@import "lessons.scss"
+@import "testimonials.sass"
+@import "lessons.sass"
 @import "about.scss"
 @import "home.sass"

@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  # Admin Routes
+  #--------------
+    get '/admin' => 'main#admin'
+  devise_for :admins do
+  end
+
   root "main#home"
 
   get '/' => 'main#home'

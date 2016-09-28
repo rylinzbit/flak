@@ -1,0 +1,81 @@
+// Place all the styles related to the Lessons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$tBorder: 1px solid red
+
+.lessons-wrapper
+	margin: 0
+	width: 100%
+	position: relative
+	overflow: visible
+
+	.title
+		border-top: 20px solid $dark-green
+		display: inline-block
+		position: absolute
+		top: 0
+		left: -10px
+		width: 6%
+		background-color: rgba($light-green, 1)
+		font-family: $primary-font
+		vertical-align: top
+		z-index: 2
+		p 
+			margin: 0
+			color: $white
+			font-size: 4vw
+			text-align: center
+
+	.content-box 
+		background-color: rgba(	$olive-green, .9)
+		color: $dark-gray
+		color: $white 
+		padding: 2%
+		display: inline-block
+		letter-spacing: 2px
+		border-radius: 5px
+		font-size: 1.3em
+	
+	.lesson-container
+		margin-bottom: 30px
+		display: block
+		position: relative
+		height: auto
+		min-height: 100vh
+		width: 100%
+		background-attachment: fixed
+		background-repeat: no-repeat
+		background-size: cover
+		// border: $tBorder
+
+	.lc-1
+		background-image: url(image-path('lesson-1.jpg'))
+		background-position: 0 0
+		border-top: 20px solid $dark-green
+		.content-1
+			float: right
+			margin: 25% 5% 0 0
+			width: 45%
+
+	.lc-2
+		background-image: url(image-path('lesson_land_left.jpg'))
+		background-position: 90% 10%
+		.content-2 
+			margin: 5% 0 5% 5%
+			width: 25%
+			span 
+				font-weight: bold
+	
+	.lc-3
+		background-image: url(image-path('lesson_youth.jpg'))
+		background-position: 90% 0
+		.content-3 
+			margin: 5% 0 5% 5%
+			width: 25%
+			span 
+				font-weight: bold
+		
+	
+
+

@@ -1,3 +1,3 @@
 class Testimonial < ActiveRecord::Base
-	validates :name, :comment, presence: true
+	validates :name, :content, presence: true
 end
