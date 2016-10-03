@@ -2,7 +2,7 @@ class TestimonialsController < ApplicationController
 	def index 
 		@testimonials = Testimonial.all
 		# response = client.business('fight-like-a-knight-valley-village-2')
-		response = Yelp.client.business('fight-like-a-knight-valley-village-2')
+		# response = Yelp.client.business('fight-like-a-knight-valley-village-2')
 
 	end
 
