@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :admins do
   end
 
+  resources :classes, :controller=>"lessons"
+
   root "main#home"
 
   get '/' => 'main#home'
@@ -16,8 +18,6 @@ Rails.application.routes.draw do
   get '/show/:id' => 'blogs#show'
 
   post "/create_comment" => "blogs#create_comment"
-
-  get '/classes' => 'lessons#index'
 
   get '/about' => 'about#index'
   
