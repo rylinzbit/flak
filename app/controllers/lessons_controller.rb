@@ -13,13 +13,14 @@ class LessonsController < ApplicationController
   def create
     @lesson = Lesson.new(lessons_params)
     if @lesson.save
-        redirect_to @lesson
+        redirect_to @classes
     else
-        render "New"
+        render "new"
     end
   end
 
   def edit
+    @lesson = Lesson.find(params[:id])
   end
 
   def update
