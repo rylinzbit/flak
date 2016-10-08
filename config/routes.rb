@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   devise_for :admins do
   end
 
-  resources :classes, :controller=>"lessons"
+  # resources :classes, :controller=>"lessons"
+  resources :lessons, path: 'classes'
 
   root "main#home"
 

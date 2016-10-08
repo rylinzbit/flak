@@ -11,9 +11,9 @@ class LessonsController < ApplicationController
   end
 
   def create
-    @lesson = Lesson.new(lessons_params)
-    if @lesson.save
-        redirect_to @classes
+    lesson = Lesson.new(lessons_params)
+    if lesson.save
+        redirect_to '/classes'
     else
         render "new"
     end
@@ -24,9 +24,19 @@ class LessonsController < ApplicationController
   end
 
   def update
+    lesson = Lesson.find(params[:id])
+    if lesson.update_attributes(lessons_params)
+      redirect_to '/classes'
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @lesson = Lesson.find(params[:id])
+    @lesson.destroy
+
+    redirect_to '/classes'
   end
 
   private
