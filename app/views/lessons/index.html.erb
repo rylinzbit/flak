@@ -13,6 +13,10 @@
 	</div>
 	<% @lessons.each do |lesson| %>
 		<div class="lesson-container" style="background-image:url(/assets/<%= lesson.photo %>)">
+			<% if admin_signed_in? %>
+				<%= link_to 'EDIT', edit_lesson_path(lesson.id), class: "btn btn-primary" %>
+				<%= link_to 'DELETE',  lesson_path(lesson.id), method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+			<% end %>
 			<div class="content-box">
 				<h3><%= lesson.title  %></h3>
 				<p><%= lesson.subtitle %></p>
