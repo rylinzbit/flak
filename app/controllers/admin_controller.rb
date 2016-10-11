@@ -1,6 +1,11 @@
 class AdminController < ApplicationController
 
 	def admin_main
+		if admin_signed_in?
+			redirect_to "/admin_dashboard"
+		else
+			render "admin_main"
+		end
 	end
 
 	def admin_dashboard
