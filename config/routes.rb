@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   get '/admin_home' => 'admin#admin_home'
   get '/admin_gallery' => 'admin#admin_gallery'
 
+  # resources :classes, :controller=>"lessons"
+  resources :lessons, path: 'classes'
+
   root "main#home"
 
   get '/' => 'main#home'
@@ -31,8 +34,6 @@ Rails.application.routes.draw do
   get '/show/:id' => 'blogs#show'
 
   post "/create_comment" => "blogs#create_comment"
-
-  get '/classes' => 'lessons#index'
 
   get '/about' => 'about#index'
   
