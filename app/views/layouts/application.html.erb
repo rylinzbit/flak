@@ -13,7 +13,7 @@
 <body class="container-fluid">
 	<header class="top-nav row">
 		<ul class="">
-			<li class=""><a href="/">Home</a></li>
+			<li class=""><a href="/home">Home</a></li>
 			<li class=""><a href="/blogs">Blog</a></li>
 			<li class=""><a href="/classes">Class</a></li>
 			<li class=""><a href="/about">About</a></li>
@@ -27,10 +27,11 @@
   		<% end %>
 	<% end %>
 
-	<p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-<%= yield %>
+	<!-- <p class="notice"><%= notice %></p> -->
+  <!-- <p class="alert"><%= alert %></p> -->
+<div class="body-content">
+	<%= yield %>
+</div>
 
 	<footer class="">
 		<section class="left-side-footer">
