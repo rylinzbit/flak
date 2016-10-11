@@ -1,14 +1,29 @@
 Rails.application.routes.draw do
 
+  resources :blogs
+  
   # Admin Routes
   #--------------
-    get '/admin' => 'main#admin'
-  devise_for :admins do
+  devise_for :admins
+
+  authenticated :admin do
+    root 'admin#admin_dashboard', as: :authenticated_root
   end
+
+  get '/admin' => 'admin#admin_main'
+  get '/admin_dashboard' => 'admin#admin_dashboard'
+  get '/admin_blogs' => 'admin#admin_blogs'
+  get '/admin_blogs/:id' => 'admin#admin_blog_show'
+  get '/admin_new_blog' => 'admin#admin_new_blog'
+  get '/admin_classes' => 'admin#admin_classes'
+  get '/admin_about' => 'admin#admin_about'
+  get '/admin_home' => 'admin#admin_home'
+  get '/admin_gallery' => 'admin#admin_gallery'
 
   root "main#home"
 
   get '/' => 'main#home'
+  get '/home' => 'main#home'
   post '/create_email' => 'main#create_email'
 
   get '/blogs' => 'blogs#index'

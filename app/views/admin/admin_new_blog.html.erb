@@ -1,0 +1,11 @@
+<div class="new-blog">
+	<h1>New Blog</h1>
+	<form action="/blog/new" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<label for="title">Blog Title</label>
+		<input type="text" name="title"> <br />
+		<label for="photo">Blog Photo</label>
+		<input type="file" name="photo">
+		<textarea name="content" placeholder="Let the journey begin..."></textarea>
+	</form>
+</div>
