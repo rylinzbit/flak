@@ -1,0 +1,101 @@
+.admin-wrapper
+	margin-top: 50px
+.left-side-nav
+	float: left
+	padding: 20px 30px 60px
+	margin-left: 10px
+	border-left: 5px solid rgba($light-green, 0.6)
+	background-color: $off-white
+	box-shadow: $drop-2
+	.devise-links
+		display: block
+		padding: 5px
+		color: $light-gray
+		font-family: $text-font-italic
+		border-left: 2px solid $off-white
+	.devise-links:hover
+		color: $dark-green
+		border-left: 2px solid rgba($light-green, 0.6)
+		cursor: pointer
+	h2
+		color: $text-gray
+		font-family: $secondary-font-italic
+		border-bottom: 1px solid $light-gray
+.admin-dashboard
+	.pages-tabs
+		width: 450px
+		margin: 40px auto 20px
+		li
+			list-style-type: none
+		.tabs
+			text-align: center
+			padding: 12px 30px
+			margin: 20px auto
+			color: $light-green
+			background-color: $off-white
+			font-family: $secondary-font
+			font-size: 3em
+			box-shadow: $drop-2
+		.tabs:hover
+			color: $white
+			background-color: rgba($light-green, 0.7)
+			transform: scale(1.1)
+			box-shadow: $drop-1
+
+.admin-blogs
+	width: 700px 
+	margin: 30px auto
+	.add-blog-btn
+		color: $off-white
+		font-family: $secondary-font
+		font-size: 2em
+		padding: 20px 60px
+		background-color: rgba($olive-green, 0.8)
+		border: none
+		box-shadow: $drop-3
+	.add-blog-btn:hover
+		transform: scale(1.1)
+		box-shadow: $drop-1
+	.admin-blogs-list
+		padding: 10px 30px
+		margin-top: 20px
+		background-color: $off-white
+		max-height: 500px
+		overflow: scroll
+		box-shadow: $drop-3
+		h2 
+			width: 100%
+			color: $olive-green
+			padding: 0 0 10px
+			font-family: $secondary-font-italic
+			border-bottom: 1px solid $olive-green
+		li
+			list-style-type: none
+			padding: 0 10px
+			h6, h3
+				display: inline-block
+				vertical-align: middle
+			h6
+				padding-right: 15px
+				font-family: $text-font-italic
+			h3
+				color: $light-green
+				font-family: $secondary-font
+			&:hover
+				background-color: rgba($light-gray, 0.1)
+
+.new-blog
+	width: 700px
+	margin: 30px auto
+	h1
+		color: $olive-green
+		font-family: $secondary-font-italic
+		padding: 10px 0
+		margin-bottom: 20px
+		border-bottom: 2px solid $olive-green
+	textarea
+		width: 100%
+		height: 400px
+		border: none
+		box-shadow: $drop-3
+
