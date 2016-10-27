@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# Paperclip for image upload
+gem 'paperclip', '~> 5.0.0'
 # Devise is a flexible authentication solution
 gem 'devise'
 # YELP
