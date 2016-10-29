@@ -15,6 +15,7 @@ class LessonsController < ApplicationController
     if lesson.save
         redirect_to '/classes'
     else
+        @lesson = Lesson.new
         render "new"
     end
   end
@@ -25,9 +26,13 @@ class LessonsController < ApplicationController
 
   def update
     lesson = Lesson.find(params[:id])
+
+
     if lesson.update_attributes(lessons_params)
       redirect_to '/classes'
     else
+      @lesson = Lesson.find(params[:id])
+      puts lesson.errors
       render 'edit'
     end
   end
@@ -42,7 +47,7 @@ class LessonsController < ApplicationController
   private
 
   def lessons_params
-    params.require(:lesson).permit(:title, :subtitle, :description, :extra_title, :extra_description)
+    params.require(:lesson).permit(:title, :subtitle, :description, :extra_title, :extra_description, :image)
   end
 
 end
