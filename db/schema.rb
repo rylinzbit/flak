@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026173600) do
+ActiveRecord::Schema.define(version: 20161210015532) do
 
   create_table "abouts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "added_updates", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "content"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -60,6 +66,12 @@ ActiveRecord::Schema.define(version: 20161026173600) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "home_updates", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "content"
+  end
+
   create_table "lessons", force: :cascade do |t|
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
@@ -80,6 +92,12 @@ ActiveRecord::Schema.define(version: 20161026173600) do
     t.string   "name"
     t.string   "projects"
     t.integer  "likes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "updates", force: :cascade do |t|
+    t.string   "update"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -12,12 +12,18 @@ Rails.application.routes.draw do
 
   get '/admin' => 'admin#admin_main'
   get '/admin_dashboard' => 'admin#admin_dashboard'
+
   get '/admin_blogs' => 'admin#admin_blogs'
-  get '/admin_blogs/:id' => 'admin#admin_blog_show'
   get '/admin_new_blog' => 'admin#admin_new_blog'
+  get '/admin_blog/:id' => 'admin#admin_blog_show'
+  patch '/admin_blog/:id' => 'admin#admin_blog_update'
+  post '/admin_blog/new' => 'admin#admin_create_blog'
+  delete '/admin_blog/:id' => 'admin#admin_delete_blog'
+
   get '/admin_classes' => 'admin#admin_classes'
   get '/admin_about' => 'admin#admin_about'
-  get '/admin_home' => 'admin#admin_home'
+  get '/admin_updates_board' => 'admin#admin_updates_board'
+  post '/admin_update' => 'admin#admin_new_update'
   get '/admin_gallery' => 'admin#admin_gallery'
 
   # resources :classes, :controller=>"lessons"
@@ -31,7 +37,7 @@ Rails.application.routes.draw do
 
   get '/blogs' => 'blogs#index'
   get '/most_recent' => 'blogs#most_recent'
-  get '/show/:id' => 'blogs#show'
+  get '/blogs/:id' => 'blogs#show'
 
   post "/create_comment" => "blogs#create_comment"
 

@@ -11,7 +11,7 @@
 		<h2>Blogs</h2>
 		<ul>
 			<% @blogs.reverse.each do |blog| %>
-				<a href="/admin_blogs/<%= blog.id %>"><li>
+				<a href="/admin_blog/<%= blog.id %>"><li>
 					<h6><%= blog.created_at.strftime("%B %-d, %Y") %></h6>	
 					<h3><%= blog.title %></h3>
 				</li></a>

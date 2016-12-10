@@ -22,13 +22,50 @@ class AdminController < ApplicationController
 	def admin_new_blog
 	end
 
+	def admin_create_blog
+		blog = Blog.new( title: params[:title], content: params[:content], photo: params[:photo] )
+		if blog.save
+			flash[:success] = "Blog successfully added"
+			redirect_to "/blogs/#{blog.id}"
+		else
+			flash[:errors] = blog.errors.full_messages
+			redirect_to :back
+		end
+	end
+
+	def admin_blog_update
+		blog = Blog.find( params[:id] )
+
+		if blog.update_attributes( title: params[:title], content: params[:content])
+			flash[:success_modal] = "Blog successfully updated"
+		else
+			flash[:errors] = blog.errors.full_messages
+		end
+		redirect_to "/admin_blog/#{params[:id]}"
+	end
+
+	def admin_delete_blog
+		blog = Blog.find( params[:id] ).delete
+		redirect_to '/admin_blogs'
+	end
+
 	def admin_classes
 	end
 
 	def admin_about
 	end
 
-	def admin_home
+	def admin_updates_board
+	end
+
+	def admin_new_update
+		newUpdate = HomeUpdate.new( content: params[:content] )
+		if newUpdate.save
+			flash[:success_modal] = "Update was successfully added"
+		else
+			flash[:errors]
+		end
+		redirect_to "/admin_updates_board"
 	end
 
 	def admin_gallery
