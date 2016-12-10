@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   authenticated :admin do
     root 'admin#admin_dashboard', as: :authenticated_root
   end
+  root 'intro#landing'
+  get '/intro' => 'intro#index'
 
   get '/admin' => 'admin#admin_main'
   get '/admin_dashboard' => 'admin#admin_dashboard'
@@ -28,8 +30,6 @@ Rails.application.routes.draw do
 
   # resources :classes, :controller=>"lessons"
   resources :lessons, path: 'classes'
-
-  root "main#home"
 
   get '/' => 'main#home'
   get '/home' => 'main#home'

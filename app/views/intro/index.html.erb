@@ -1,0 +1,112 @@
+<script>
+   $(document).ready(function() {
+    var vid = document.getElementById("fight-video");
+    vid.preload = "auto";
+        $('.flak-wrapper').hide();
+      setTimeout(function(){
+          $(".flak-wrapper").delay(55000).fadeIn(400);
+      });
+  });
+     $(window).load(function() {
+      setTimeout(function(){
+        document.getElementById("fight-video").play();
+        setTimeout(function(){
+          document.getElementById("music").play();
+        }, 365);
+        // setTimeout(function(){
+        //     document.getElementById("music").pause();
+        //   }, 52715);
+      document.getElementById('stopButton').onclick = function() {
+        var sounds = document.getElementsByTagName('audio');
+        for(i=0; i<sounds.length; i++) sounds[i].pause();
+      };
+      document.getElementById('playButton').onclick = function() {
+        var sounds = document.getElementsByTagName('audio');
+        for(i=0; i<sounds.length; i++) sounds[i].play();
+      };
+    })
+  });
+</script>
+<div class="intro-wrapper"> 
+    <i class="glyphicon glyphicon-volume-off" id="stopButton"></i>
+    <i class="glyphicon glyphicon-volume-up" id="playButton"></i>
+    <a id="skip" href="/home">Skip Intro</a>
+  <div class="view-wrapper">  
+      <div class="fight-wrapper">
+        <audio preload="auto" controls src="assets/Killers.mp3" type='audio/mp3' id="music"></audio>
+        <img class="fight-overlay" src="assets/paper_texture.png"/>
+        <img id="fight-screen" src="assets/fight.png" alt="" />
+        <h1>FIGHT LIKE A KNIGHT</h1>
+        <video preload="auto" id="fight-video" src="assets/headsmack.mov"></video>
+      </div>
+    <div class="what-is-flak">
+        <h1>What is Flak?</h1>
+        <div class="section-2-block-wrapper">
+            <div class="section-2-blocks one">
+                <div class="section-2-blocks-overlay-one"></div>
+                <img src="assets/tinaCropped.png" />
+                <div class="section-2-block-detail">
+                    <h1>A New Way <br />to Get <br />Fit</h1>
+                </div>
+            </div>  
+            <div class="section-2-blocks two">
+                <div class="section-2-blocks-overlay-two"></div>
+                <img src="assets/sword.png" />
+                <div class="section-2-block-detail-2">
+                    <h1>Culture <br />& <br />History</h1>
+                </div>
+            </div>  
+            <div class="section-2-blocks three">
+                <div class="section-2-blocks-overlay-three"></div> 
+                <img src="assets/beehat.jpg" />
+                <div class="section-2-block-detail-3">
+                    <h1>Real Weapon<br />Fighting<br />Techniques</h1>
+                </div>
+            </div>  
+        </div>    
+    </div>
+    <div class="experience-wrapper">
+      <div class="experience-overlay"></div>
+      <div class="experience-side-block"></div>
+      <img id="shield" src="assets/gray_shield.png" alt="">
+      <div class="experience-bottom-block">
+        <h1>Experience a whole new world</h1>
+      </div>
+      <img id="experience-bg" src="assets/walking.png" alt="">
+
+    </div>
+    <div class="leaves-wrapper">
+      <div id="leaves-overlay"></div>
+      <img id="leaves-bg" src="assets/leaves.png" alt="">
+      <div id="leaves-box-one">
+        <img src="assets/tree.png" alt="">
+        <h1>Be a part of something<br />Different and<br />Exciting</h1>
+      </div>
+      <div id="leaves-box-two">
+        <h1>An alternative to your<br />standard fitness<br />class</h1>
+        <img src="assets/back_shield.jpg" alt="">
+      </div>
+      <div id="leaves-box-three">
+        <img src="assets/flakwide.jpg" alt="">
+        <h1>Instructor led in a<br />group setting with<br />sparring and realistic<br />battle training</h1>
+        <img src="assets/ground_battle.jpg" alt="">
+      </div>
+    </div>
+     <div class="fading-wrapper" >
+       <img id="fade-1" src="assets/chrisBandana.jpg" />
+       <img id="fade-3" src="assets/dude.jpg" />
+       <img id="fade-2" src="assets/rylin.jpg" />
+       <img id="fade-4" src="assets/badass.jpg" />
+       <img id="fade-5" src="assets/teagan.jpg" />
+       <img id="fade-6" src="assets/funTina.jpg" />
+     </div>
+     <div class="flak-wrapper">
+       <img id="flak" src="assets/FLAK_OG.png" alt="">
+       <div class="intro-btn-group">
+        <a id="intro-btn" href="/intro">INTRO</a>
+        <p> | </p>
+        <a id="enter" href="/home">ENTER</a>
+       </div>
+     </div>
+  </div>
+</div>
