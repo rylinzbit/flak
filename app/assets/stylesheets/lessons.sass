@@ -1,0 +1,87 @@
+// Place all the styles related to the Lessons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$tBorder: 1px solid red
+
+.lessons-wrapper
+	margin: 0
+	width: 100%
+	position: relative
+	overflow: visible
+
+	.title
+		border-top: 20px solid $dark-green
+		display: inline-block
+		position: absolute
+		top: 0
+		left: -10px
+		width: 6%
+		background-color: rgba($light-green, 1)
+		font-family: $primary-font
+		vertical-align: top
+		z-index: 2
+		p 
+			margin: 0
+			color: $white
+			font-size: 4vw
+			text-align: center
+
+	.content-head-box, .content-box 
+		margin-top: 300px
+		background-color: rgba(	$olive-green, .9)
+		color: $dark-gray
+		color: $white 
+		padding: 2%
+		display: inline-block
+		// letter-spacing: 2px
+		border-radius: 5px
+		font-size: 1.3em
+	
+	.lesson-head-container, .lesson-container
+		margin-bottom: 30px
+		display: block
+		position: relative
+		height: auto
+		min-height: 100vh
+		width: 100%
+		background-attachment: fixed
+		background-repeat: no-repeat
+		background-size: cover
+		// border: $tBorder
+
+	.lesson-head-container
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255, 1) 90%), url(image-path('lesson-1.jpg'))
+		background-position: 0 0
+		border-top: 20px solid $dark-green
+		.content-head-box
+			float: right
+			margin: 25% 5% 0 0
+			width: 45%
+
+	.lesson-container
+		background-position: 90% 10%
+		.content-box 
+			margin: 5% 0 5% 5%
+			width: 30%
+			span 
+				font-weight: bold
+	
+// ADMIN BUTTONS
+.lesson-admin-buttons
+	position: absolute
+	top: 5%
+	left: 5%
+
+
+	@media only screen and (max-width : 900px)
+		.lesson-container .content-box
+			width: 65%
+
+
+// LESSON NEW
+// ---------------------------
+.lesson-new>form>input
+	display: block
+	width: 300px
+	margin: 7px 30px

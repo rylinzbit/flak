@@ -1,0 +1,14 @@
+<div class="admin-wrapper">
+	<div class="admin-main">
+		<% if admin_signed_in? %>
+			<%= link_to "Sign Out", destroy_admin_session_path, method: :delete %><br>
+			<%= link_to "Update Current Admin Info", edit_admin_registration_path, method: :get %><br>
+			<%= link_to "Create New Administrator", new_admin_registration_path %><br>
+<br>
+		<% else %>
+			<h2>Welcome Admin!</h2>
+			<%= link_to "Sign In", new_admin_session_path, class: "admin-sign-in" %><br>
+		<% end %>		
+	</div>
+
+</div>

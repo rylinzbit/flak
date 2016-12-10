@@ -1,0 +1,26 @@
+  <div class="form-group">
+	  *<%= label_tag(:title, "Class Name:") %>
+	  <%= f.text_field :title, class:'form-control' %>
+	</div>
+	<div class="form-group">
+	  <%= label_tag(:subtitle, "Subtitle:") %>
+	  <%= f.text_field :subtitle, class:'form-control' %>
+	</div>
+	<div class="form-group">
+	  <%= label_tag(:image, "Image:") %>
+	  <%= f.file_field :image, class:'form-control' %>
+	</div>
+	<div class="form-group">
+	  *<%= label_tag(:description, "Description:") %>
+	  <%= f.text_area :description, size: "60x5", class:'form-control' %>
+	</div>
+	  <div class="form-group">
+	  <%= label_tag(:extra_title, "Extra Title:") %>
+	  <%= f.text_field :extra_title, class:'form-control' %>
+	</div>
+	<div class="form-group">
+	  <%= label_tag(:extra_description, "Extra Description:") %>
+	  <%= f.text_area :extra_description, size: "60x5", class:'form-control' %>
+	</div>
+  <%= f.submit "Save", class: 'btn btn-default btn-lg btn-submit' %>
+  <%= link_to "Cancel" , '/classes', class: 'btn btn-default btn-lg'%>

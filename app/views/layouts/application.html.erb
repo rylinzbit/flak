@@ -13,6 +13,10 @@
 <body class="container-fluid">
 <% unless controller_name == 'intro' %>
 	<header class="top-nav row">
+		<% if admin_signed_in? %>
+			<div class="admin-active">ADMIN</div>
+		<% end %>
+
 		<ul class="">
 			<li class=""><a href="/home">Home</a></li>
 			<li class=""><a href="/blogs">Blog</a></li>
@@ -28,7 +32,11 @@
   		<% end %>
 	<% end %>
 
+
+<div class="body-content">
 <%= yield %>
+</div>
+
 <% unless controller_name == 'intro' %>
 	<footer>
 		<section class="left-side-footer">
@@ -54,9 +62,9 @@
 				</li>
 				<li class="right-side-headings"><a href="">Press</a>
 					<ul class="footer-small-links">
-						<li><a href="">Gallery</a></li>
+						<li><a href="/testimonials">Testimonials</a></li>
 						<li><a href="">Happenings</a></li>
-						<li><a href="">Testimonials</a></li>
+						<li><a href="">Gallery</a></li>
 					</ul>
 				</li>
 				<li class="right-side-headings"><a href="">Legal</a>

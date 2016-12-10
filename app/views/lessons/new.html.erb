@@ -1,0 +1,14 @@
+<section class="lesson-new">
+
+<div class="container">
+	<div class="col-sm-6 col-sm-offset-3">
+		<h2>ADD A NEW CLASS!</h2>
+		<%= form_for @lesson, url: {action: "create"}, html: { multipart: true } do |f| %>
+
+			<%= render "form_template", f: f %>
+
+		<% end %>
+	</div>
+</div>
+
+</section>

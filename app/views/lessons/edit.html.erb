@@ -1,0 +1,14 @@
+<section class="lesson-edit">
+
+<div class="container">
+	<div class="col-sm-6 col-sm-offset-3">
+		<h2>EDIT THIS CLASS!</h2>
+		<%= form_for @lesson, url: {action: "update"}, html: { multipart: true } do |f| %>
+
+			<%= render "form_template", f: f %>
+
+		<% end %>
+	</div>
+</div>
+
+</section>

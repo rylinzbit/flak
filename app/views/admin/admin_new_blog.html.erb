@@ -1,0 +1,19 @@
+<div class="left-side-nav">
+	<h2>Welcome Admin</h2> <br />
+	<a href="/admin_dashboard" class="devise-links">Back to Dashboard</a>
+	<%= link_to "Update Current Admin Info", edit_admin_registration_path, method: :get, class: "devise-links" %>
+	<%= link_to "Create New Administrator", new_admin_registration_path, class: "devise-links" %>
+	<%= link_to "Sign Out", destroy_admin_session_path, method: :delete, class: "devise-links" %>
+</div>
+<div class="new-blog">
+	<h1>New Blog</h1>
+	<form action="/admin_blog/new" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<label for="title">Blog Title</label>
+		<input type="text" name="title"> <br />
+		<label for="photo">Blog Photo</label>
+		<input type="file" name="photo">
+		<textarea name="content" placeholder="Let the journey begin..."></textarea>
+		<input type="submit" value="Post Blog" class="blog-btn">
+	</form>
+</div>

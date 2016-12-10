@@ -1,0 +1,11 @@
+<div class="admin-wrapper">
+	<div class="admin-main">
+		<% if admin_signed_in? %>
+		<% else %>
+			<li class="deviselink">
+				<%= link_to "Sign In", new_admin_session_path %><br>
+			</li>
+		<% end %>		
+	</div>
+
+</div>
