@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'contact/index'
+
   resources :blogs
   
   # Admin Routes
@@ -45,6 +47,8 @@ Rails.application.routes.draw do
   
   get '/contact' => 'contact#index'
 
+  get '/class/new' => 'lessons#new'
+  
   get '/testimonials' => 'testimonials#index'
   post '/testimonials' => 'testimonials#create'
   post '/testimonials/:id/like' => 'testimonials#like'
