@@ -31,6 +31,11 @@
     		<p><%= error %></p>
   		<% end %>
 	<% end %>
+	<% if flash[:success_modal] %>
+		<div class="success-modal">
+			<%= flash[:success_modal] %>
+		</div>
+	<% end %>
 
 
 <div class="body-content">
@@ -41,20 +46,20 @@
 	<footer>
 		<section class="left-side-footer">
 			<div class="social-media-icons">
-				<a href="">F</a>
-				<a href="">I</a>
-				<a href="">Q</a>
-				<a href="">S</a>
+				<!-- <a href="">F</a> -->
+				<!-- <a href="">I</a> -->
+				<!-- <a href="">Q</a> -->
+				<!-- <a href="">S</a> -->
 			</div>
 			<form action="/create_email" method="post">
 				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-				<input type="email" name="email" placeholder="Email">
+				<input type="email" name="subscriber[email]" placeholder="Email">
 				<input type="submit" value="Subscribe" class="email-submit-btn">
 			</form>
 		</section>
 		<section class="right-side-footer">
 			<ul class="right-side-main-ul">
-				<li class="right-side-headings"><a href="/">Home</a></li>
+				<li class="right-side-headings"><a href="/home">Home</a></li>
 				<li class="right-side-headings"><a href="/blogs">Blog</a>
 					<ul class="footer-small-links">
 						<li><a href="/most_recent">Most&nbspRecent</a></li>
@@ -63,8 +68,8 @@
 				<li class="right-side-headings"><a href="">Press</a>
 					<ul class="footer-small-links">
 						<li><a href="/testimonials">Testimonials</a></li>
-						<li><a href="">Happenings</a></li>
-						<li><a href="">Gallery</a></li>
+						<!-- <li><a href="">Happenings</a></li> -->
+						<!-- <li><a href="">Gallery</a></li> -->
 					</ul>
 				</li>
 				<li class="right-side-headings"><a href="">Legal</a>
@@ -77,7 +82,7 @@
 					<ul class="footer-small-links">
 						<li>( 818 ) 303-5895</li>
 						<li class="flak-email">
-							<a>Swordmaster<span class="at-symbol">@</span>
+							<a href="mailto:swordmaster@fightlikeaknight.com">Swordmaster<span class="at-symbol">@</span>
 							<br />
 							FightLikeAKnight.com</a>
 						</li>

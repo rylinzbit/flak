@@ -1,4 +1,5 @@
 <div class="testimonial-wrapper-main">
+	<div class="testimonial-background-img"></div>
 
 	<% @testimonials.each do |testimonial| %>
 		<div class="comment-block">
@@ -8,7 +9,7 @@
 				<div>
 					<form class="comment-form-like" action="testimonials/<%= testimonial.id %>/like" method="post">
 						<input type='hidden' name="authenticity_token" value="<%= form_authenticity_token %>">
-						<button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span></button>
+						<!-- <button class="btn btn-default btn-sm" type="submit"><span class="glyphicon glyphicon-thumbs-up"></span></button> -->
 					</form>
 					<%= testimonial.likes==nil ? "0" : testimonial.likes %> likes
 				</div>
