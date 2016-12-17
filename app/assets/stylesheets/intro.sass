@@ -476,6 +476,9 @@ body::-webkit-scrollbar
     max-height: 100vh
     position: relative
     z-index: 100
+    top: 50%
+    transform: translate(0, -50%)
+
     img
         position: relative
     #fade-1 
@@ -489,9 +492,7 @@ body::-webkit-scrollbar
                 opacity: 0.7
             90%
                 opacity: 0        
-    #fade-2
-        margin-left: 25% 
-        margin-top: 12%
+    #fade-2 
         opacity: 0
         animation: fadeTwo 3000ms ease-in 46700ms forwards
         @keyframes fadeTwo
@@ -502,8 +503,6 @@ body::-webkit-scrollbar
             90%
                 opacity: 0
     #fade-3
-        margin-left: 10%
-        margin-top: 5%
         opacity: 0
         animation: fadeThree 3000ms ease-in 47900ms forwards
         @keyframes fadeThree
@@ -514,8 +513,6 @@ body::-webkit-scrollbar
             90%
                 opacity: 0
     #fade-4
-        margin-left: 70%
-        margin-top: 60%
         opacity: 0
         animation: fadeFour 3000ms ease-in 49100ms forwards
         @keyframes fadeFour
@@ -526,8 +523,6 @@ body::-webkit-scrollbar
             90%
                 opacity: 0
     #fade-5
-        margin-left: 30%
-        margin-top: 5%
         opacity: 0
         animation: fadeFour 3000ms ease-in 50300ms forwards
         @keyframes fadeFour
@@ -538,8 +533,6 @@ body::-webkit-scrollbar
             90%
                 opacity: 0
     #fade-6
-        margin-left: 60%
-        margin-top: 2%
         opacity: 0
         animation: fadeFour 3000ms ease-in 51500ms forwards
         @keyframes fadeFour
@@ -569,12 +562,24 @@ body::-webkit-scrollbar
     font-family: alienandcows
     color: #250600
 #intro-btn, #enter, p
-    display: inline-block    
+    display: inline-block  
+#stopButton:hover, #playButton:hover
+    cursor: pointer      
 #skip 
-    position: fixed   
+    position: fixed 
+    right: 40px  
     z-index: 101
+    font-size: 2em
+    color: $text-gray
     margin-top: 20px
-    margin-left: 120px    
+    margin-left: 120px
+    font-family: bigNoodleTitling 
+.display-none 
+    display: none
+
+.display-block
+    display: block
+
 .intro-btn-group
     width: 100% 
     margin-top: -40px                                                          

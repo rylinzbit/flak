@@ -1,4 +1,6 @@
 <script>
+  var soundOn = true;
+
    $(document).ready(function() {
     var vid = document.getElementById("fight-video");
     vid.preload = "auto";
@@ -22,7 +24,7 @@
       };
       document.getElementById('playButton').onclick = function() {
         var sounds = document.getElementsByTagName('audio');
-        for(i=0; i<sounds.length; i++) sounds[i].play();
+        for(i=0; i<sounds.length; i++) sounds[i].play(); 
       };
     })
   });
@@ -30,7 +32,7 @@
 <div class="intro-wrapper"> 
     <i class="glyphicon glyphicon-volume-off" id="stopButton"></i>
     <i class="glyphicon glyphicon-volume-up" id="playButton"></i>
-    <a id="skip" href="/home">Skip Intro</a>
+    <a id="skip" href="/home"><p>Skip Intro</p></a>
   <div class="view-wrapper">  
       <div class="fight-wrapper">
         <audio preload="auto" controls src="assets/Killers.mp3" type='audio/mp3' id="music"></audio>
