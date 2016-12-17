@@ -44,7 +44,7 @@
 			</div>
 			<% @blogs.each do |blog| %>
 				<div class="home-single-blog">
-					<p><img src="/assets/<%= blog.photo %>"></p>
+					<p><%= image_tag blog.photo.url %></p>
 					<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
 					<p class="blog-title"><a href="/blogs/<%=blog.id %>"><%= blog.title %></a></p>
 					<p class="blog-content"><%= blog.content %></p>		
