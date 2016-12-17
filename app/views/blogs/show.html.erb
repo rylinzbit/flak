@@ -1,6 +1,6 @@
 <section class="blog_show">
 	<div class="row">
-		<p><img src="/assets/<%= @blog.photo %>"></p>
+		<p><%= image_tag @blog.photo.url %></p>
 		<p class="lato-it"><%= @blog.updated_at.strftime("%B %-d, %Y") %></p>
 		<p class="slant-heading"><%= @blog.title %></p>
 		<p class="blog_content lato"><%= @blog.content %></p>
@@ -36,14 +36,14 @@
 	<% if flash[:errors] %>
 		<%= flash[:errors] %>
 	<% end %>
-		<h5 class="col-lg-2">Add Comment</h5>
+		<h5 class="col-md-2">Add Comment</h5>
 		<form action="/create_comment" method="post">
 			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 			<input type="hidden" name="comment[blog_id]" value="<%= @blog.id %>" class="form-control">
-			<p class="col-lg-5"><input type="text" name="comment[name]" placeholder="Name" class="form-control"></p>
+			<p class="col-md-5"><input type="text" name="comment[name]" placeholder="Name" class="form-control"></p>
 			<p>
-			<p class="col-lg-8"><textarea name="comment[comment]" placeholder="Comment" class="form-control"></textarea></p>
-			<input type="submit" value="ADD" class="btn btn-default col-lg-1">
+			<p class="col-md-8"><textarea name="comment[comment]" placeholder="Comment" class="form-control"></textarea></p>
+			<input type="submit" value="ADD" class="btn btn-default col-md-2 col-md-offset-8">
 		</form>
 	</div>
 </section>
