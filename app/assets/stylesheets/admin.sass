@@ -60,20 +60,20 @@
 		margin: 40px auto 20px
 		li
 			list-style-type: none
-		.tabs
-			text-align: center
-			padding: 12px 30px
-			margin: 20px auto
-			color: $light-green
-			background-color: $off-white
-			font-family: $secondary-font
-			font-size: 3em
-			box-shadow: $drop-2
-		.tabs:hover
-			color: $white
-			background-color: rgba($light-green, 0.7)
-			transform: scale(1.1)
-			box-shadow: $drop-1
+.tabs
+	text-align: center
+	padding: 12px 30px
+	margin: 20px auto
+	color: $light-green
+	background-color: $off-white
+	font-family: $secondary-font
+	font-size: 3em
+	box-shadow: $drop-2
+.tabs:hover
+	color: $white
+	background-color: rgba($light-green, 0.7)
+	transform: scale(1.1)
+	box-shadow: $drop-1
 
 .admin-blogs
 	width: 700px 
@@ -119,6 +119,7 @@
 			&:hover
 				background-color: rgba($light-gray, 0.1)
 .success-modal
+	z-index: 1000
 	position: absolute
 	color: white
 	font-family: $secondary-font-italic
@@ -225,3 +226,9 @@
 		border: none
 		box-shadow: $drop-3
 		resize: none
+
+.admin-classes 
+	width: 450px
+	margin: 40px auto 20px
+	ul
+		list-style-type: none

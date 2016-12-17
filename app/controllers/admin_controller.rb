@@ -20,14 +20,16 @@ class AdminController < ApplicationController
 	end
 
 	def admin_new_blog
+		@blog = Blog.new
 	end
 
 	def admin_create_blog
-		blog = Blog.new( title: params[:title], content: params[:content], photo: params[:photo] )
+		blog = Blog.new( blog_params )
 		if blog.save
 			flash[:success] = "Blog successfully added"
 			redirect_to "/blogs/#{blog.id}"
 		else
+			@blog = Blog.new
 			flash[:errors] = blog.errors.full_messages
 			redirect_to :back
 		end
@@ -70,5 +72,10 @@ class AdminController < ApplicationController
 
 	def admin_gallery
 	end
+
+	private
+		def blog_params
+			params.require(:blog).permit(:title, :photo, :content)
+		end
 
 end
