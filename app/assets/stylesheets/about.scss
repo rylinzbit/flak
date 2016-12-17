@@ -8,94 +8,98 @@ $brd: 1px solid red;
 	position: relative;
 
 	.about-top {
-		font-family: $primary-font;
+		font-family: $secondary-font;
 		margin: 0;
+		width: 100%;
+		height: 520px;
 		background-color: rgba($dark-green, .5);
-		
-		img {
-			width: 100%;
-			z-index: -1;
-		}
+		box-shadow: $drop-1;
+		background-image: url("about_chris_sm.jpg");
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
 
 		.about-top-title {
-			position: relative;
-			height: 20%;
-			text-align: center;
-			/*position: absolute; s*/
-			/*top: 0; s*/
-			/*left: 2em; s*/
-			/*height: 100%; s*/
+			text-align: center; 
+			height: 100%;
+			width: 160px;
+			overflow: hidden; 
+			background-color: rgba($olive-green, 0.7);
+			padding: 0 60px;
 
 			p {
 				width: auto;
-				display: inline;
+				display: block;
 				font-family: inherit;
-				font-size: 7em;
-				/*font-size: 5vw; s*/
-				color: $dark-gray;
+				font-size: 4.8em;
+				color: $off-white;
 			}
 		}  /*title*/
 	} /*top*/
 
 	.about-main {
 		position: relative;
-		margin: 0;
-		width: 100%;
+		margin: 20px auto 200px;
+		width: 75%;
+		box-shadow: $drop-2;
 		/*display: flex; s*/
 		/*justify-content: flex-end; s*/
 		/*align-items: stretch; s*/
+		color: $text-gray;
+		background-color: #fff;
 
 		.about-main-contents, .about-main-friends {
-			display: block;
-			color: $text-gray;
-			background-color: #fff;
+			display: inline-block;
+			vertical-align: top;
 		}
 		
 		.about-main-contents {
 			/*width: 70%; s*/
-			width: 100%;
+			width: 75%;
 			margin: 0;
-			padding: 1.2em;
+			padding: 20px 30px 20px;
+			font-family: $text-font;
 			/*padding: 2em 6em 2em 2em; s*/
 			h1, p {
 				margin: 0;
 				display: block;
-				width: 100%;
+				// width: 100%;
 				/*border: $brd;*/
 			}
 			h1 {
 				text-align: center;
 				vertical-align: middle;
-				font-size: 3em;
+				font-size: 60px;
+				letter-spacing: 7px;
+				font-family: $primary-font;
 				/*font-size: 8rem; s				*/
-				padding-bottom: .5em;
+				padding-bottom: 15px;
 			}
 			p{
 				color: $text-gray;
 				text-align: justify;
 				text-indent: 2em;
-				font-size: 1.5em;
+				font-size: 20px;
+				line-height: 30px;
 				padding-bottom: 2em;
 			}
 		} /*content*/
 	
 		.about-main-friends {
-			padding: 2em;
+			padding: 5px 2em 2em 2.4em;
+			margin-top: 50px;
+			width: 22%;
+			border-left: 1px solid $light-gray;
 			/*visibility: hidden;*/
 			/*padding: 2em 2em 0 1em; s*/
 			h3 {
-				display: table;
-				&:after {
-					border-bottom: 1px solid #000;
-					content:'';
-					display: block;
-					width: 87%;
-				}
+
 			}
 			p {
 				font-family: $text-font-italic;
-				font-size: 1.5em;
+				font-size: 1.2em;
 				font-weight: bold;
+				display: block;
 
 			}
 		} /*friends*/
