@@ -15,3 +15,23 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+  // $(window).load(function() {
+  //     setTimeout(function(){
+  //       document.getElementById("fight-video").play();
+  //       setTimeout(function(){
+  //         document.getElementById("music").play();
+  //       }, 365);
+  //       setTimeout(function(){
+  //           document.getElementById("music").pause();
+  //         }, 52715);
+  //     document.getElementById('stopButton').onclick = function() {
+  //       var sounds = document.getElementsByTagName('audio');
+  //       for(i=0; i<sounds.length; i++) sounds[i].pause();
+  //     };
+  //     document.getElementById('playButton').onclick = function() {
+  //       var sounds = document.getElementsByTagName('audio');
+  //       for(i=0; i<sounds.length; i++) sounds[i].play();
+  //     };
+  //   })
+  // });

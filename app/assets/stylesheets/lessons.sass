@@ -9,33 +9,40 @@ $tBorder: 1px solid red
 	width: 100%
 	position: relative
 	overflow: visible
-
+	.lessons-top
+		width: 80%
+		height: 520px
+		margin-right: -100px
+		background-image: url("class3.jpg")
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 100% auto
+		box-shadow: $drop-1
 	.title
-		border-top: 20px solid $dark-green
-		display: inline-block
+		// border-top: 20px solid $dark-green
+		// display: block
 		position: absolute
-		top: 0
-		left: -10px
-		width: 6%
-		background-color: rgba($light-green, 1)
-		font-family: $primary-font
+		right: 0
+		// left: -10px
+		padding: 20px 130px 80px 60px
+		background-color: rgba($light-green, 0.7)
+		font-family: $secondary-font
 		vertical-align: top
 		z-index: 2
 		p 
 			margin: 0
 			color: $white
-			font-size: 4vw
+			font-size: 70px
 			text-align: center
+			display: block
 
 	.content-head-box, .content-box 
-		margin-top: 300px
-		background-color: rgba(	$olive-green, .9)
-		color: $dark-gray
+		// margin-top: 300px
+		background-color: rgba(	$olive-green, 0.58)
 		color: $white 
-		padding: 2%
-		display: inline-block
+		padding: 20px
+		// display: inline-block
 		// letter-spacing: 2px
-		border-radius: 5px
 		font-size: 1.3em
 	
 	.lesson-head-container, .lesson-container
@@ -43,7 +50,7 @@ $tBorder: 1px solid red
 		display: block
 		position: relative
 		height: auto
-		min-height: 100vh
+		// min-height: 100vh
 		width: 100%
 		background-attachment: fixed
 		background-repeat: no-repeat
@@ -51,27 +58,45 @@ $tBorder: 1px solid red
 		// border: $tBorder
 
 	.lesson-head-container
-		background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255, 1) 90%), url(image-path('lesson-1.jpg'))
-		background-position: 0 0
-		border-top: 20px solid $dark-green
+		// background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 70%, rgba(255,255,255, 1) 90%), url(image-path('lesson-1.jpg'))
+		// background-position: 0 0
+		// border-top: 20px solid $dark-green
 		.content-head-box
-			float: right
-			margin: 25% 5% 0 0
-			width: 45%
+			// float: right
+			// margin: 25% 5% 0 0
+			margin-top: -105px
+			margin-left: 15px
+			text-align: center
+			padding: 40px 20px
+			width: 50%
+			font-family: $text-font-italic
 
 	.lesson-container
-		background-position: 90% 10%
+		// background-position: 90% 10%
+		margin: 150px 0 120px 30px
 		.content-box 
-			margin: 5% 0 5% 5%
-			width: 30%
+			margin: 10px 8px
+			width: 40%
+			background-color: rgba($off-white, 0.6)
+			color: $olive-green
+			font-family: $text-font
+			display: inline-block
+			vertical-align: top
+			box-shadow: $drop-3
+			h3 
+				font-family: $primary-font
+				font-size: 40px
+				letter-spacing: 5px
+				margin-bottom: 25px
+				white-space: pre-wrap
 			span 
-				font-weight: bold
+				font-family: $text-font-italic
+			p
+				white-space: pre-wrap
 	
 // ADMIN BUTTONS
 .lesson-admin-buttons
-	position: absolute
-	top: 5%
-	left: 5%
+	position: relative
 
 
 	@media only screen and (max-width : 900px)

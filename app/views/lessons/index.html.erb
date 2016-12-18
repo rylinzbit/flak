@@ -1,31 +1,33 @@
 <div class="lessons-wrapper">
-	<div class="title">
-		<p>C</p>
-		<p>L</p>
-		<p>A</p>
-		<p>S</p>
-		<p>S</p>
+	<div class="lessons-top">
+		<div class="title">
+			<p>C</p>
+			<p>L</p>
+			<p>A</p>
+			<p>S</p>
+			<p>S</p>
+		</div>
 	</div>
 	<div class="lesson-head-container">
 		<div class="content-head-box">
 			<p>Fight Like a Knight classes offer a unique way to workout while satisfying the need for Chivalry, Honor, and Courtly Graces so absent from our traditional world.</p>
 		</div>
 	</div>
-	<% @lessons.each do |lesson| %>
-		<div class="lesson-container" style="background-image:url(<%= lesson.image.url %>)">
-			<% if admin_signed_in? %>
-				<div class="lesson-admin-buttons">
-					<%= link_to 'EDIT', edit_lesson_path(lesson.id), class: "btn btn-danger" %>
-					<%= link_to 'DELETE',  lesson_path(lesson.id), method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-				</div>
-			<% end %>
+	<div class="lesson-container">
+		<% @lessons.each do |lesson| %>
 			<div class="content-box">
 				<h3><%= lesson.title  %></h3>
 				<p><%= lesson.subtitle %></p>
 				<p><%= lesson.description %></p>
 				<p><span><%= lesson.extra_title %></span></p>
 				<p><%= simple_format(lesson.extra_description) %></p>
+				<% if admin_signed_in? %>
+					<div class="lesson-admin-buttons">
+						<%= link_to 'EDIT', edit_lesson_path(lesson.id), class: "btn btn-danger" %>
+						<%= link_to 'DELETE',  lesson_path(lesson.id), method: :delete,  data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+					</div>
+				<% end %>
 			</div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
 </div>

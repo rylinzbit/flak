@@ -20,17 +20,19 @@
 			<h1>Recent Updates</h1>
 			<div class="update-underlay">
 				<ul>
-					<li><span>MAR 12</span> update here</li>
-					<li><span>MAR 10</span> No class</li>
-					<li><span>MAR 3</span> yippee</li>
+					<% if @newUpdates.length > 0 %>
+						<% @newUpdates.reverse.each do |newUpdate| %>
+							<li>
+								<span><%= newUpdate.created_at.strftime("%^b, %-d") %></span>
+								<%= newUpdate.content %>
+							</li>
+						<% end %>
+					<% else %>
+						<li>No Updates yet</li>
+					<% end %>
 				</ul>
 			</div>
 			<div class="updates-overlay">
-				<ul>
-					<li><span>MAR 12</span> update here</li>
-					<li><span>MAR 10</span> No class</li>
-					<li><span>MAR 3</span> yippee</li>
-				</ul>
 			</div>
 		</div>
 	</div>
@@ -42,9 +44,9 @@
 			</div>
 			<% @blogs.each do |blog| %>
 				<div class="home-single-blog">
-					<p><img src="/assets/<%= blog.photo %>"></p>
+					<p><%= image_tag blog.photo.url %></p>
 					<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
-					<p class="blog-title"><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+					<p class="blog-title"><a href="/blogs/<%=blog.id %>"><%= blog.title %></a></p>
 					<p class="blog-content"><%= blog.content %></p>		
 				</div>
 			<% end %>

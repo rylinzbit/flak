@@ -6,7 +6,8 @@
 			<%= link_to "Create New Administrator", new_admin_registration_path %><br>
 <br>
 		<% else %>
-			<%= link_to "Sign In", new_admin_session_path %><br>
+			<h2>Welcome Admin!</h2>
+			<%= link_to "Sign In", new_admin_session_path, class: "admin-sign-in" %><br>
 		<% end %>		
 	</div>
 

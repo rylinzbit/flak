@@ -5,11 +5,11 @@
 			<% @blogs.reverse.each.with_index(1) do |blog, index| %>
 				<% if index.odd? %>
 						<li class="blog-post">
-							<p><img src="/assets/<%= blog.photo %>"></p>
+							<p><a href="/blogs/<%=blog.id %>"><%= image_tag blog.photo.url %></a></p>
 							<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
-							<p class="blog-title"><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+							<p class="blog-title"><a href="/blogs/<%=blog.id %>"><%= blog.title %></a></p>
 							<p class="blog-content"><%= blog.content %></p>
-							<p class="blog-read-more"><a href="/show/<%=blog.id %>">[ Read more ...]</a></p>
+							<p class="blog-read-more"><a href="/blogs/<%=blog.id %>">[ Read more ... ]</a></p>
 						</li>
 				<% end %>
 			<% end %>
@@ -21,11 +21,11 @@
 			<% @blogs.reverse.each.with_index(1) do |blog, index| %>
 				<% if index.even? %>
 						<li class="blog-post">
-							<p><img src="/assets/<%= blog.photo %>"></p>
+							<p><a href="/blogs/<%=blog.id %>"><%= image_tag blog.photo.url %></a></p>
 							<p class="blog-date"><%= blog.created_at.strftime("%B %-d, %Y") %></p>
-							<p class="blog-title"><a href="/show/<%=blog.id %>"><%= blog.title %></a></p>
+							<p class="blog-title"><a href="/blogs/<%=blog.id %>"><%= blog.title %></a></p>
 							<p class="blog-content"><%= blog.content %></p>
-							<p class="blog-read-more"><a href="/show/<%=blog.id %>">[ Read more ...]</a></p>
+							<p class="blog-read-more"><a href="/blogs/<%=blog.id %>">[ Read more ... ]</a></p>
 						</li>
 				<% end %>
 			<% end %>

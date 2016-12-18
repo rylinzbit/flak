@@ -78,6 +78,7 @@ $drop-1: 0px 0px 10px $light-gray /* blog posts and images box-shadow */
 $drop-2: 0px 0px 8px rgba($light-gray, 0.2) /* home welcome section box-shadow */
 $drop-3: 1px 1px 5px rgba($light-gray, 0.8)
 $drop-4: inset 0px 0px 8px rgba($light-gray, 0.3)
+$drop-5: inset 1px 0px 4px rgba($light-gray, 0.6)
 
 =paper-background 
   background: image-url('paper_texture.png') 
@@ -109,15 +110,17 @@ body
       padding: 0
 
 .body-content
-  min-height: 60%
+  min-height: 90vh
 
 @import "about.scss"
 @import "admin.sass"
 @import "blogs.sass"
 @import "bootstrap-sprockets"
 @import "bootstrap"
+@import "contact.sass"
 @import "footer.sass"
 @import "header.sass"
 @import "home.sass"
+@import "intro.sass"
 @import "lessons.sass"
 @import "testimonials.sass"
