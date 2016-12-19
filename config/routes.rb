@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'contact/index'
+  map.root 'intro#landing'
 
   resources :blogs
   
@@ -11,12 +11,13 @@ Rails.application.routes.draw do
   authenticated :admin do
     root 'admin#admin_dashboard', as: :authenticated_root
   end
-  root 'intro#landing'
   get '/intro' => 'intro#index'
 
   get '/admin' => 'admin#admin_main'
   get '/admin_dashboard' => 'admin#admin_dashboard'
 
+  get 'contact/index'
+  
   get '/admin_blogs' => 'admin#admin_blogs'
   get '/admin_new_blog' => 'admin#admin_new_blog'
   get '/admin_blog/:id' => 'admin#admin_blog_show'

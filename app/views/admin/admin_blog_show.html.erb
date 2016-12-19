@@ -18,7 +18,7 @@
 		<textarea id="admin-blog-content" name="content"><%= @blog.content %></textarea>
 		<textarea type="text" id="admin-blog-title" name="title"><%= @blog.title %></textarea> 
 		<br />
-		<img src="/assets/<%= @blog.photo %>">
+		<%= image_tag @blog.photo.url %>">
 		<input type="submit" value="Update Blog" class="blog-btn">
 	</form>
 		<a href="/admin_blog/<%= @blog.id %>" data-method="delete"><button class="blog-btn">Delete Blog</button></a>
